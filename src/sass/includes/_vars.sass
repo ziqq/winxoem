@@ -1,0 +1,72 @@
+//Variables
+
+// Font variables
+$base-font-value: 16
+
+@function rem($x)
+	@return ($x / $base-font-value)+rem
+
+//FONT
+$f          : opsans-400, sans-serif
+$f-i        : opsans-400i, sans-serif
+$f-light    : opsans-300, sans-serif
+$f-light-i  : opsans-300i, sans-serif
+$f-bold     : opsans-600, sans-serif
+$f-bold-i   : opsans-600i, sans-serif
+$f-ex-bold  : opsans-800, sans-serif
+$f-ex-bold-i: opsans-800i, sans-serif
+$f-num      : oswald-400, sans-serif
+
+$base-font-size  : rem(16)
+$base-font-family: $f
+$base-line-height: 1.5
+
+//Heading
+$h1: rem($base-font-value + 24); //40
+$h2: rem($base-font-value + 18); //34
+$h3: rem($base-font-value + 12); //28
+$h4: rem($base-font-value + 6);  //22
+$h5: rem($base-font-value + 2);  //18
+
+$font-size-accent: rem($base-font-value + 2)
+$font-size-note: rem($base-font-value - 2)
+
+//Отступы
+$base-indent   : 30px
+$half-indent   : $base-indent / 2
+$section-indent: 70px
+
+//Тень
+$box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)
+$box-shadow--inset: inset 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)
+$box-shadow--dropdown: 0 4px 12px rgba(0,0,0,.15)
+
+//Base Variebles
+$color-main                :#FFCC01
+$color-secondary           :#2d6cb4
+
+//gray
+$gray--darkest             :#272727
+$gray                      :#6F6E6E
+$gray--light               :#999
+$gray--lighten             :#C4C4C4
+$gray--lightest            :#E0E0E0
+
+//Text Color
+$color-text                :$gray
+//Link Color
+$color-link                :$color-secondary
+//Placeholder Color
+$color-placeholder         :$gray--light
+
+//border
+$color-border--dark        :#434343
+$color-border              :#C4C4C4
+$color-border--light       :#E9E9E9
+$border-radius             :2px
+
+//bg
+$color-bg                  :#434343
+$color-bg--light           :#F9F7F6
+$color-bg--lighten         :#F7F7F7
+$color-bg--lightest        :#F2F2F2

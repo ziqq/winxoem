@@ -1,0 +1,22 @@
+@import "susy";
+
+// Susy Grid Config
+// For more information: http://susydocs.oddbird.net/en/latest/settings/
+$susy: (
+	columns: 12,
+	gutters: 1/4,
+	box-sizing: border-box,
+	// column-width: 60px,
+	container: 75em,
+	math: fluid,
+	output: float,
+	gutter-position: after,
+	
+	debug: (
+		image: show,
+		color: rgba(#66f, .5),
+		output: background,
+		toggle: top right,
+	)
+	
+);

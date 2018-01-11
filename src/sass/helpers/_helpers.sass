@@ -1,0 +1,83 @@
+//color link
+=links($link, $visit, $hover, $active)
+	a
+		color: $link
+		&:visited
+			color: $visit
+		&:hover
+			color: $hover
+		&:active
+			color: $active
+			
+//transition
+=tr($time)
+	-webkit-transition: all $time ease
+	-moz-transition: all $time ease
+	-ms-transition: all $time ease
+	-o-transition: all $time ease
+	transition: all $time ease
+	
+//border-radius
+=br($radius)     
+	-webkit-border-radius: $radius
+	-moz-border-radius: $radius
+	-ms-border-radius: $radius
+	-o-border-radius: $radius
+	border-radius: $radius
+
+//box-shadow
+=bs($shadow)
+	-webkit-box-shadow: $shadow
+	-moz-box-shadow: $shadow
+	-ms-box-shadow: $shadow
+	-o-box-shadow: $shadow
+	box-shadow: $shadow
+
+//text-shadow
+=ts($string) 
+	-webkit-text-shadow: $string
+	-moz-text-shadow: $string
+	-ms-text-shadow: $string
+	-o-text-shadow: $string
+	text-shadow: $string
+
+
+@function em($size, $context: 16)
+	@return ($size/$context) * 1em
+
+@function img-url($image)
+	@return url('../img/#{$image}')
+
+=image($image)
+	background-image: img-url($image)
+
+=trans($what: all, $dur: 0.2s, $easing: ease)
+	transition: $what $dur $easing
+
+=smooth-scroll
+	-webkit-overflow-scrolling: touch
+
+=smooth-font
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+=gpu
+	transform: translate3d(0,0,0)
+
+=md
+	+r(1023)
+		@content
+
+=sm
+	+r(767)
+		@content
+
+=xs
+	+r(599)
+		@content
+
+=tY($var)
+	transform: translateY($var)
+
+=tX($var)
+	transform: translateX($var)

@@ -1,0 +1,33 @@
+---
+title: KUNG-FU
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	{% include "partials/_header.html" %}
+
+	{# mixin example #}
+	{{mixin.icon('facebook')}}
+	{{mixin.icon('bm')}}
+	{{mixin.icon('areligion')}}
+
+	<h1>{{title}}</h1>
+
+
+	{% for i in range(0, 10) -%}
+		{{item.product()}}
+	{%- endfor %}﻿
+	
+
+	{% include "partials/_footer.html" %}
+	{# data usage example #}
+		{% import "data/data.html" as tests %}
+		
+		{% for test in tests.list %}
+		<li>{{test.title}}</li>
+		{% endfor %}
+	{# end of example #}
+
+{% endblock %}
+

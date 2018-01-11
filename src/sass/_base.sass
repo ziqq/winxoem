@@ -1,0 +1,51 @@
+@import helpers/all
+@import includes/all
+@import generated/sprite-png
+// @import generated/sprite-svg
+
+//Mixins
+=xx-scroll {
+	+scrollbar
+		width: 5px
+	+scrollbar-track
+		width: 5px
+	+scrollbar-thumb
+		background-color: $color-accent
+
+html
+	height: 100%
+
+body
+	input, textarea
+		&:focus, &:required, &:invalid
+			color: #666
+	input, textarea
+		&:required, &:valid
+			color: #666
+
+body
+	position: relative
+	min-width: 320px
+	font-family: $base-font-family
+	font-size: $base-font-size
+	font-weight: normal
+	line-height: 1.5
+	overflow-x: hidden
+	+smooth-scroll
+	+smooth-font
+	+xx-scroll
+
+img ,.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.rub
+	font-family: rouble
+	font-style: normal
+
+.num
+	font-family: $f-num
+
+
+@import layouts

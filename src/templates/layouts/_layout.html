@@ -1,0 +1,38 @@
+{% import "partials/_mixins.html" as mixin %}
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
+
+		{# {% include "../partials/_media-tags.html" %} #}
+
+		<link rel="stylesheet" media="all" href="css/libs.min.css">
+		<link rel="stylesheet" media="all" href="css/main.css">
+	</head>
+	<body>
+
+		<!-- begin wrapper -->
+		<div class="wrapper">
+			{% block content %}{% endblock %}
+		</div>
+		<!-- end wrapper -->
+		
+		<!-- begin windows -->
+		<div class="windows">
+			{% include "partials/_popup.html" %}
+		</div>
+		<!-- end windows -->
+
+		<!-- begin scripts -->
+		<script type="text/javascript" src="js/libs.min.js"></script>
+		{% block scripts %}{% endblock %}
+		<script type="text/javascript" src="js/main.js"></script>
+		<!-- end scripts -->
+
+		<!-- begin svg -->
+		{% include "partials/_svg.html" %}
+		<!-- end svg -->
+		
+	</body>
+</html>
