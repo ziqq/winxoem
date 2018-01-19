@@ -1,1 +1,41 @@
-<p>Hello from partials/_header.html</p>
+<!-- begin header -->
+<header class="header" itemscope itemtype="http://schema.org/WPHeader">
+	<div class="container">
+		<div class="header__inner">
+			<div class="logo header__logo" itemscope itemprop="logo" itemtype="http://schema.org/Organization">
+				<sup>win</sup>x<sub>oem</sub>
+			</div>
+
+			<!-- begin contact -->
+			<div class="header__callback callback">
+				<a href="tel:+79271071138" class="callback__link" itemprop="telephone">
+					{{mixin.icon('phone')}}
+					+7 (927) 107-11-39
+				</a>
+				<a class="callback__text" href="#" >перезвонить Вам ?</a>
+			</div>
+			<!-- end contact -->
+
+			<!-- begin header__ofer -->
+			<div class="header__offer">
+				<div class="offer">
+					<div class="offer__inner">
+						<h1 class="offer__title" itemprop="headline">Windows 10 Pro <span>32/64 bit OEM key</span></h1>
+						<h2 class="offer__subtitle">за</h2>
+
+						<div class="offer__price price">
+							<span class="price__new">2899</span> <i class="fa fa-rub"></i>
+						</div>
+
+						<a href="#order" data-fancybox class="button js-button offer__button">
+							<span class="button__inner">Заказать</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end header__ofer -->
+	</div>
+</div>	
+</header>
+<!-- end header -->

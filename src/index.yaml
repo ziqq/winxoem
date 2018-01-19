@@ -4,9 +4,3 @@ PageList:
 - file: home.html
   ready: 50
   desc : Главная
-- file: catalog.html
-  ready: 50
-  desc : Каталог
-- file: card.html
-  ready: 50
-  desc : Подробная карточа

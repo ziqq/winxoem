@@ -1,0 +1,19 @@
+//footere
+.footer
+	padding: 50px 0
+	color: #fff
+	background: $color-bg--dark url('../img/general/footer-bg.jpg') no-repeat
+	+rmin(1024)
+		+cover
+
+	//footer__form
+	&__form
+		.input
+			+r(375)
+				width: 100%
+				max-width: 300px
+				margin-right: 0
+				&__wrap
+					text-align: center
+				input
+					width: 100%

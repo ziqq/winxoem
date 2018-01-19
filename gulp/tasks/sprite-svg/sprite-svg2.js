@@ -15,8 +15,8 @@ var consolidate = require('gulp-consolidate');
 var config      = require('../../config');
 
 //Sprite SVG
-gulp.task('sprite:svg', function () {
-	return gulp.src(config.src.icons + '/*.svg')
+gulp.task('sprite:svg:create', function () {
+	return gulp.src(config.src.iconsSvg + '/*.svg')
 	.pipe(plumber({
 		errorHandler: config.errorHandler
 	}))
@@ -31,13 +31,13 @@ gulp.task('sprite:svg', function () {
 			}
 		}
 	}))
-	.pipe(cheerio({
-		run: function($, file) {
-			$('[fill]:not([fill="currentColor"])').removeAttr('fill');
-			$('[stroke]').removeAttr('stroke');
-		},
-		parserOptions: { xmlMode: true }
-	}))
+	// .pipe(cheerio({
+	// 	run: function($, file) {
+	// 		$('[fill]:not([fill="currentColor"])').removeAttr('fill');
+	// 		$('[stroke]').removeAttr('stroke');
+	// 	},
+	// 	parserOptions: { xmlMode: true }
+	// }))
 	.pipe(gulp.dest(config.src.img + '/'));
 });
 
@@ -58,9 +58,9 @@ gulp.task('sprite:svg', function () {
 
 /*  Объединяем задачи в последовательность
 ------------------------------------ */
-gulp.task('sprite:svg:build', function (cb) {
+gulp.task('sprite:svg', function (cb) {
 	runSequence(
-		'sprite:svg',
+		'sprite:svg:create',
 		'svg2string',
 		cb);
 });

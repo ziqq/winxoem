@@ -1,6 +1,11 @@
 // example of simple includes for js
-//=include ../libs/jquery.min.js
-//=include ../libs/modernizr.js
-//=include ../libs/svg4everybody.min.js
-//=include ../libs/waypoints.min.js
-//=include ../libs/jquery.equalheights.min.js
+//=include ../../bower_components/jQuery/dist/jquery.js
+//=include ../../bower_components/jquery-migrate/jquery-migrate.js
+
+
+//=include ../../bower_components/jquery.maskedinput/dist/jquery.maskedinput.js
+
+//=include ../../bower_components/fancybox/dist/jquery.fancybox.js
+
+// =include assets/sprite-svg.js
+//=include ../../bower_components/svg4everybody/dist/svg4everybody.js

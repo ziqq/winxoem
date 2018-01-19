@@ -22,9 +22,9 @@ var config = {
         svg          : 'src/img/svg',
         icons        : 'src/icons',
         // path to png sources for sprite:png task
-        iconsPng     : 'src/img/icons',
+        iconsPng     : 'src/icons/png',
         // path to svg sources for sprite:svg task
-        iconsSvg     : 'src/img/svg',
+        iconsSvg     : 'src/icons/svg',
         // path to svg sources for iconfont task
         iconsFont    : 'src/img/icons',
         fonts        : 'src/fonts',

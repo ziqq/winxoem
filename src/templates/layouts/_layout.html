@@ -1,38 +1,74 @@
 {% import "partials/_mixins.html" as mixin %}
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
+<head>
+	<meta charset="utf-8">
 
-		{# {% include "../partials/_media-tags.html" %} #}
+	<title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
 
-		<link rel="stylesheet" media="all" href="css/libs.min.css">
-		<link rel="stylesheet" media="all" href="css/main.css">
-	</head>
-	<body>
+	<meta name="description" content="Windows 10 Pro по низкой цене" />	
+	<meta name="keywords" content="Windows 10, Pro, OEM, key, 64bit, 32bit, ключ, ключи, купить"/>
 
-		<!-- begin wrapper -->
-		<div class="wrapper">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="application-name" content="win-x-oem.ru - Windows 10 Pro по низкой цене">
+	<meta name="msapplication-TileImage" content="img/favicon/mstile-144x144.png">
+	<meta name="msapplication-TileColor" content="#FFCC01">
+
+	<meta name="theme-color" content="#FFCC01">
+	<meta name="msapplication-navbutton-color" content="#FFCC01">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#FFCC01">
+
+	<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32">
+	<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon/favicon.ico" sizes="16x16">
+	<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-touch-icon-152x152.png">
+
+	{#{% include "../partials/_media-tags.html" %}#}
+
+	<link rel="stylesheet" media="all" href="css/libs.min.css">
+	<link rel="stylesheet" media="all" href="css/main.css">
+</head>
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+
+	<div class="wrapper">
+		<div class="wrapper__in">
+			{% include "partials/_header.html" %}
 			{% block content %}{% endblock %}
 		</div>
-		<!-- end wrapper -->
-		
-		<!-- begin windows -->
-		<div class="windows">
-			{% include "partials/_popup.html" %}
-		</div>
-		<!-- end windows -->
+		{% include "partials/_footer.html" %}
+	</div>
+	
+	<div class="overlay"></div>
+	<div class="go-top js-goTop"></div>
 
-		<!-- begin scripts -->
-		<script type="text/javascript" src="js/libs.min.js"></script>
-		{% block scripts %}{% endblock %}
-		<script type="text/javascript" src="js/main.js"></script>
-		<!-- end scripts -->
-
-		<!-- begin svg -->
-		{% include "partials/_svg.html" %}
-		<!-- end svg -->
-		
-	</body>
+	<!-- begin windows -->
+	<div class="windows">
+		{% include "partials/_popup.html" %}
+	</div>
+	<!-- end windows -->
+	<!-- begin scripts -->
+	<script type="text/javascript" src="js/libs.min.js"></script>
+	{% block scripts %}{% endblock %}
+	<script type="text/javascript" src="js/main.js"></script>
+	<script data-skip-moving="true">
+		(function(w,d,u){
+			var s=d.createElement('script');s.async=1;s.src=u+'?'+(Date.now()/60000|0);
+			var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+		})(window,document,'https://cdn.bitrix24.ru/b5911999/crm/site_button/loader_1_u50lh2.js');
+	</script>
+	<!-- end scripts -->
+	<!-- begin svg -->
+	{% include "partials/_svg.html" %}
+	<!-- end svg -->	
+</body>
 </html>
+
