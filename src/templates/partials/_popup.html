@@ -12,38 +12,45 @@
 			<!-- END Hidden Required Fields -->
 
 			<div class="form__inner">
-				<label class="input js-input">
-					<span class="input__title">Ваше имя</span>
-					<input type="text" name="Имя">
-				</label>
-				<span class="form__title">Выбирете способ доставки</span>
-				<label class="input js-input">
-					<span class="input__title">Ваш e-mail</span>
-					<input type="email" name="Имя">
-				</label>
-				<label class="input js-input">
-					<span class="input__title">Ваш телефон</span>
-					<input class="js-phone-mask" type="tel" name="Имя">
-				</label>
-				<span class="form__title">Выбирете способ оплаты</span>
-				<label class="js-input--radio input input_radio">
-					<span class="input__title">QIWI</span>
-					<input class="js-phone-mask" type="radio" name="Способ оплаты">
-					<i class="input__box"></i>
-					<span class="input__dropdown">+79271071139</span>
-				</label>
-				<label class="js-input--radio input_radio">
-					<span class="input__title">Yandex Деньги</span>
-					<input class="js-phone-mask" type="radio" name="Способ оплаты">
-					<i class="input__box"></i>
-					<span class="input__dropdown">410014816926457</span>
-				</label>
-				<label class="js-input--radio input_radio">
-					<span class="input__title">Сбербанк</span>
-					<input class="js-phone-mask" type="radio" name="Способ оплаты">
-					<i class="input__box"></i>
-					<span class="input__dropdown">410014816926457</span>
-				</label>
+				<div class="order__item">
+					<span class="order__title">Как Вас зовут?</span>
+					<label class="input js-input">
+						<span class="input__title">Ваше имя</span>
+						<input type="text" name="Имя">
+					</label>
+				</div>
+				<div class="order__item">
+					<span class="order__title">Куда оправить ключ?</span>
+					<label class="input js-input">
+						<span class="input__title">На Ваш e-mail</span>
+						<input type="email" name="Имя">
+					</label>
+					<label class="input js-input">
+						<span class="input__title">На Ваш телефон</span>
+						<input class="js-phone-mask" type="tel" name="Имя">
+					</label>
+				</div>
+				<div class="order__item">
+					<span class="order__title">Выбирете способ оплаты</span>
+					<label class="js-input--radio input input_radio">
+						<span class="input__title input__title_qiwi">QIWI <span>-15%</span></span>
+						<input class="js-phone-mask" type="radio" name="Способ оплаты">
+						<i class="input__box"></i>
+						<span class="input__dropdown">+79271071139</span>
+					</label>
+					<label class="js-input--radio input_radio">
+						<span class="input__title">Yandex Деньги</span>
+						<input class="js-phone-mask" type="radio" name="Способ оплаты">
+						<i class="input__box"></i>
+						<span class="input__dropdown">410014816926457</span>
+					</label>
+					<label class="js-input--radio input_radio">
+						<span class="input__title">Сбербанк</span>
+						<input class="js-phone-mask" type="radio" name="Способ оплаты">
+						<i class="input__box"></i>
+						<span class="input__dropdown">410014816926457</span>
+					</label>
+				</div>
 			</div>
 			<div class="form__buttons">
 				<input type="submit" value="Заказать" class="form__btn button button_gr">

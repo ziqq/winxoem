@@ -1,0 +1,26 @@
+.sale
+	padding: 80px 0 90px
+	text-align: center
+	color: #fff
+	background: $color-bg--dark url('../img/general/footer-bg.jpg') no-repeat
+	+rmin(1024)
+		+cover
+	.s-title
+		display: inline-block
+		vertical-align: middle
+		margin-bottom: 0
+		margin-right: 60px
+		color: #fff
+		position: relative
+		&__title
+			span
+				color: #ff8c00
+	&__btn
+		display: inline-block
+		vertical-align: middle
+		&::before
+			content: '\f295'
+			font-family: fontawesome
+			font-size: 15px
+			color: #ff8c00
+			margin-right: 15px

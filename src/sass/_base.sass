@@ -21,6 +21,16 @@
 	-webkit-background-clip: text
 	-webkit-text-fill-color: transparent
 
+=overlay
+	position: relative
+	&::before
+		content: ''
+		display: block
+		+coverdiv
+		background-color: rgba(#000, .8)
+	& >*
+		z-index: 1
+
 html
 	height: 100%
 
@@ -38,9 +48,15 @@ body
 	&.is-fixed
 		overflow: hidden
 
+h1.h1,h2.h2,h3.h3,h4.h4,h5.h5
+	margin-top: 0
+
 img ,.img-responsive
 	display: block
 	max-width: 100%
+
+section
+	padding: 50px 0 60px
 
 .bg--dark
 	color: #fff
@@ -242,15 +258,26 @@ img ,.img-responsive
 	//input__dropdown
 	&__dropdown
 		display: none
+		padding: 5px 10px
+		font-family: $f-bold
+		color: #000
+		background-color: #ff8c00
+		border-radius: 3px
 		position: absolute
-		bottom: -20px
-		left: 0
-		width: 100%
+		top: -40px
+		left: -3px
+		&::before
+			content: ''
+			display: block
+			+arr(14, 8, #ff8c00, b)
+			position: absolute
+			bottom: -8px
+			left: 5px
 
 	//input_radio
 	&_radio
 		display: inline-block
-		margin-right: 30px
+		margin-right: 20px
 		border: none
 		position: relative
 		cursor: pointer
@@ -276,6 +303,10 @@ img ,.img-responsive
 				width: auto
 				top: auto
 				left: auto
+				&_qiwi
+					span
+						color: #ff8c00
+						font-family: $f-bold
 			
 
 
@@ -291,6 +322,7 @@ img ,.img-responsive
 
 .wx-window
 	max-width: 425px
+	padding: 25px 30px 35px
 	color: #fff
 	background: $color-bg--dark url('../img/general/popup-bg.png') top left no-repeat
 	//wx-window__wrap
@@ -311,9 +343,15 @@ img ,.img-responsive
 		opacity: .7
 
 .order
+	&__title
+		display: block
+		margin-bottom: 15px
+		color: #909090
+	&__item
+		margin-bottom: 15px
 	.form
 		&__inner
-			margin-bottom: 30px
+			margin-bottom: 20px
 		&__input
 			display: block
 			max-width: 200px
@@ -325,6 +363,11 @@ img ,.img-responsive
 					margin-right: 0
 		&__btn
 			float: none
+	.input
+		&:not(.input_radio)
+			margin-right: 0
+			width: 100%
+
 
 .b24-widget-button-position-bottom-right
 	bottom: 20px!important
