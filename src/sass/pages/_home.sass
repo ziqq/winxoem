@@ -1,8 +1,6 @@
 .sale
 	padding: 80px 0 90px
 	text-align: center
-	color: #fff
-	background: $color-bg--dark url('../img/general/footer-bg.jpg') no-repeat
 	+rmin(1024)
 		+cover
 	.s-title
@@ -12,6 +10,13 @@
 		margin-right: 60px
 		color: #fff
 		position: relative
+		+r(480)
+			margin-right: 0
+			margin-bottom: 30px
+		+r(375)
+			font-size: 23px
+		+r(320)
+			font-size: 20px
 		&__title
 			span
 				color: #ff8c00
@@ -22,5 +27,64 @@
 			content: '\f295'
 			font-family: fontawesome
 			font-size: 15px
-			color: #ff8c00
+			color: #fff
 			margin-right: 15px
+
+//work
+.work
+	background-color: #fff
+	&__items
+		text-align: center
+		+clr
+	&__item
+		display: inline-block
+		padding-top: 150px
+		text-transform: uppercase
+		font-family: opsans-700, sans-serif
+		font-size: 15px
+		position: relative
+		lost-column: 1/4
+		+r(480)
+			margin-bottom: 30px
+			lost-column: 1
+			&:last-child
+				margin-bottom: 0
+		&::before
+			content: ''
+			display: block
+			+vx
+			top: -0
+		&::after
+			content: ''
+			display: block
+			+vy
+			right: -80px
+			+s('arrow-long')
+			+r(768)
+				display: none
+		&:last-child
+			&::after
+				display: none
+		&_order
+			&::before
+				+s('call')
+		&_consalting
+			&::before
+				+s('consultation')
+		&_pay
+			&::before
+				+s('pay')
+		&_send
+			&::before
+				+s('send')
+
+//payment
+.payment
+	&__items
+		text-align: center
+	&__item
+		display: inline-block
+		background-color: #fff
+		+tr
+		&:hover
+			box-shadow: 0 10px 50px -5px rgba(0,0,9,0.1)

@@ -1,20 +1,101 @@
 ---
-title: Windows 10 Pro - Ключи Windows 10 Pro Oem Key
+title: Купить Windows 10 Pro Дешево с Большими скидками
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-	
-	<!-- begin sale -->
-	<section class="sale">
-		<div class="container">
-			<div class="s-title">
-				<h2 class="s-title__title">Скидка <span>15%</span> при оплате через <span>qiwi</span></h2>
-			</div>
-			<a href="#" class="button button_gr sale__btn">Получить скидку</a>
+
+<!-- begin whywe -->
+<section class="whywe">
+	<div class="container">
+		<div class="s-title">
+			<h2 class="s-title__title">Почему мы</h2>
 		</div>
-	</section>
-	<!-- end sale -->
+
+		<!-- begin payment__items -->
+		<div class="payment__items">
+			<div class="payment__item">{{mixin.icon('pay-qiwi')}}</a>
+			<div class="payment__item">{{mixin.icon('pay-yandex')}}</div>
+			<div class="payment__item">{{mixin.icon('pay-sber')}}</div>
+		</div>
+		<!-- end payment__items -->
+	</div>
+	
+</section><!-- end whywe -->
+
+<!-- begin payment -->
+<section class="payment">
+	<div class="container">
+		<div class="s-title">
+			<h2 class="s-title__title">Как вы можете оплатить</h2>
+		</div>
+
+		<!-- begin payment__items -->
+		<div class="payment__items">
+			<a href="https://qiwi.com/" class="payment__item">{{mixin.icon('pay-qiwi')}}</a>
+			<a href="https://money.yandex.ru" class="payment__item">{{mixin.icon('pay-yandex')}}</a>
+			<a href="https://online.sberbank.ru" class="payment__item">{{mixin.icon('pay-sber')}}</a>
+		</div>
+		<!-- end payment__items -->
+	</div>
+</section>
+<!-- end payment -->
+
+<!-- begin sale -->
+<section class="sale bg--dark">
+	<div class="container">
+		<div class="s-title">
+			<h2 class="s-title__title">Скидка <span>15%</span> при оплате на <span>qiwi</span></h2>
+		</div>
+		<a href="#order" class="button button_gr sale__btn"
+		data-fancybox 
+		data-form="Заказ со скидкой"
+		data-title="Заказать со скидкой"
+		>Получить скидку</a>
+	</div>
+</section>
+<!-- end sale -->
+
+<!-- begin work -->
+<section class="work">
+	<div class="container">
+		<div class="s-title">
+			<h2 class="s-title__title">Как мы работаем</h2>
+		</div>
+		
+		<div class="work__items">
+			<div class="work__item work__item_order">Звонок или Заявка</div>
+			<div class="work__item work__item_consalting">Консультация</div>
+			<div class="work__item work__item_pay">Оплата</div>
+			<div class="work__item work__item_send">Отправка ключа</div>
+		</div>
+	</div>
+</section>
+<!-- end work -->
+
+<!-- begin reviews -->
+<section class="reviews bg--dark">
+	<div class="container">
+		<div class="s-title">
+			<h2 class="s-title__title">Получи кэшбек 10%</h2>
+			<div class="s-title__desc">Оставь свой отзыв нам в <strong class="color-green">WhatApp</strong> или <strong class="color-blue">Telegram</strong> и получи 10% от суммы заказа на свой телефон.</div>
+		</div>
+	</div>
+	<div class="reviews__slider wx-slider">
+		<div class="wx-slider__arrow wx-slider__arrow--prev"></div>
+		<div class="wx-slider__arrow wx-slider__arrow--next"></div>
+		<div class="wx-slider__sliders js-wx-slider">
+			{% for i in range(0, 8) %}
+			<div class="wx-slider__slide" itemprop="review" itemscope itemtype="http://schema.org/Review">
+				<img src="img/reviews/0.jpg" alt="Отзывы клиентов">
+			</div>
+			<div class="wx-slider__slide" itemprop="review" itemscope itemtype="http://schema.org/Review">
+				<img src="img/reviews/1.jpg" alt="Отзывы клиентов">
+			</div>
+			{% endfor %}﻿
+		</div>
+	</div>
+</section><!-- end reviews -->
 
 {% endblock %}
 

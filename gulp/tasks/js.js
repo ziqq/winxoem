@@ -13,32 +13,32 @@ gulp.task('js', function () {
     gulp.src(config.src.js + '/main.js')
         .pipe(include())
         .on('error', function(){notify("Javascript include error");})
-        //.pipe(uglify())
-        .pipe(babel())
+        // .pipe(babel())
+        .pipe(uglify())
         .pipe(gulp.dest(config.dest.js+'/'))
         .pipe(reload({stream: true}));
 });
 
-gulp.task('js:assets', function () {
-    gulp.src(config.src.jsAssets + '/**/*')
-        .pipe(gulp.dest(config.dest.jsAssets + '/'))
-        .pipe(reload({stream: true}));
-});
+// gulp.task('js:assets', function () {
+//     gulp.src(config.src.jsAssets + '/**/*')
+//         .pipe(gulp.dest(config.production ? config.src.jsAssets + '/' : config.dest.jsAssets + '/'))
+//         .pipe(reload({stream: true}));
+// });
 
 gulp.task('js:libs', function() {
 	return gulp.src(config.src.js + '/libs.js')
 	.pipe(include())
 	.on('error', function(){notify("Javascript include error");})
-	.pipe(rename({suffix: '.min', prefix : ''}))
-	.pipe(uglify())
-	.pipe(gulp.dest(config.dest.js + '/'))
+	// .pipe(rename({suffix: '.min', prefix : ''}))
+	// .pipe(uglify())
+	.pipe(gulp.dest(config.src.jsAssets + '/'))
 	.pipe(reload({stream: true}));
 });
 
 gulp.task('js:all', function(js) {
     runSequence(
             'js:libs',
-            'js:assets',
+            // 'js:assets',
             'js',
             js
         );
@@ -47,5 +47,5 @@ gulp.task('js:all', function(js) {
 gulp.task('js:watch', function() {
     gulp.watch(config.src.js + '/main.js', ['js']);
     gulp.watch(config.src.js + '/libs.js', ['js:libs']);
-    gulp.watch(config.src.jsAssets + '/**/*', ['js:assets']);
+    // gulp.watch(config.src.jsAssets + '/**/*', ['js:assets']);
 });

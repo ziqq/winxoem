@@ -6,13 +6,13 @@
 
 	<title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
 
-	<meta name="description" content="Windows 10 Pro по низкой цене" />	
-	<meta name="keywords" content="Windows 10, Pro, OEM, key, 64bit, 32bit, ключ, ключи, купить"/>
+	<meta name="description" content="Купить Windows 10 Pro дешево с большими скидками" />	
+	<meta name="keywords" content="Windows 10, Pro, OEM, key, 64bit, 32bit, ключ, ключи, купить, windows 10 pro oem купить, windows 10 pro купить, купить ключ windows 10 pro, купить windows 10 64 bit pro лицензия, купить windows 10 32 bit pro лицензия"/>
 
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<meta name="application-name" content="win-x-oem.ru - Windows 10 Pro по низкой цене">
+	<meta name="application-name" content="win-x-oem.ru - Купить Windows 10 Pro дешево с большими скидками">
 	<meta name="msapplication-TileImage" content="img/favicon/mstile-144x144.png">
 	<meta name="msapplication-TileColor" content="#FFCC01">
 
@@ -32,9 +32,8 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-touch-icon-144x144.png">
 	<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-touch-icon-152x152.png">
 
-	{#{% include "../partials/_media-tags.html" %}#}
+	<!-- {#{% include "../partials/_media-tags.html" %}#} -->
 
-	<link rel="stylesheet" media="all" href="css/libs.min.css">
 	<link rel="stylesheet" media="all" href="css/main.css">
 </head>
 <body itemscope="itemscope" itemtype="http://schema.org/WebPage">
@@ -56,13 +55,17 @@
 	</div>
 	<!-- end windows -->
 	<!-- begin scripts -->
-	<script type="text/javascript" src="js/libs.min.js"></script>
-	{% block scripts %}{% endblock %}
 	<script type="text/javascript" src="js/main.js"></script>
 	<!-- end scripts -->
 	<!-- begin svg -->
 	{% include "partials/_svg.html" %}
-	<!-- end svg -->	
+	<!-- end svg -->
+	<script data-skip-moving="true">
+		(function(w,d,u){
+			var s=d.createElement('script');s.async=1;s.src=u+'?'+(Date.now()/60000|0);
+			var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+		})(window,document,'https://cdn.bitrix24.ru/b5911999/crm/site_button/loader_1_u50lh2.js');
+	</script>
 </body>
 </html>
 

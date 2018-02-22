@@ -1,9 +1,9 @@
 <!-- begin order -->
-<div class="order wx-window" id="order">
+<div class="order wx-window wx-window--small" id="order">
 	<div class="wx-window__wrap">
-		<h3 class="wx-window__title">Закажите сейчас</h3>
-		<p class="wx-window__subtitle">И получите Ваш уникальный ключ в течении 24 часов.</p>
-		<form class="form">
+		<h3 class="wx-window__title">Оставте заявку сейчас</h3>
+		<p class="wx-window__subtitle">Оставте заявку и наш менеджер свяжется с Вами в течении 15 мин.</p>
+		<form class="form-order">
 
 			<!-- Hidden Required Fields -->
 			<input type="hidden" name="project_name" value="winXoem">
@@ -11,51 +11,72 @@
 			<input type="hidden" name="form_subject" value="Заказ">
 			<!-- END Hidden Required Fields -->
 
-			<div class="form__inner">
+			<div class="form-order__inner">
 				<div class="order__item">
-					<span class="order__title">Как Вас зовут?</span>
 					<label class="input js-input">
 						<span class="input__title">Ваше имя</span>
 						<input type="text" name="Имя">
 					</label>
 				</div>
 				<div class="order__item">
-					<span class="order__title">Куда оправить ключ?</span>
 					<label class="input js-input">
-						<span class="input__title">На Ваш e-mail</span>
-						<input type="email" name="Имя">
-					</label>
-					<label class="input js-input">
-						<span class="input__title">На Ваш телефон</span>
-						<input class="js-phone-mask" type="tel" name="Имя">
-					</label>
-				</div>
-				<div class="order__item">
-					<span class="order__title">Выбирете способ оплаты</span>
-					<label class="js-input--radio input input_radio">
-						<span class="input__title input__title_qiwi">QIWI <span>-15%</span></span>
-						<input class="js-phone-mask" type="radio" name="Способ оплаты">
-						<i class="input__box"></i>
-						<span class="input__dropdown">+79271071139</span>
-					</label>
-					<label class="js-input--radio input_radio">
-						<span class="input__title">Yandex Деньги</span>
-						<input class="js-phone-mask" type="radio" name="Способ оплаты">
-						<i class="input__box"></i>
-						<span class="input__dropdown">410014816926457</span>
-					</label>
-					<label class="js-input--radio input_radio">
-						<span class="input__title">Сбербанк</span>
-						<input class="js-phone-mask" type="radio" name="Способ оплаты">
-						<i class="input__box"></i>
-						<span class="input__dropdown">410014816926457</span>
+						<span class="input__title">Ваш телефон</span>
+						<input class="js-phone-mask" type="tel" name="Телефон">
 					</label>
 				</div>
 			</div>
-			<div class="form__buttons">
-				<input type="submit" value="Заказать" class="form__btn button button_gr">
+			<div class="form-order__buttons">
+				<input type="submit" value="Заказать" class="form-order__btn button button_gr">
+			</div>
+			<div class="form-order__success">
+				<span>Спасибо за заявку!</span>
 			</div>
 		</form>
 	</div>
 </div>
 <!-- end order -->
+
+<!-- begin privacy -->
+<div id="privacy" class="privacy">
+
+	<h3 class="privacy__title">Политика конфиденциальности</h3>
+
+	<span class="privacy__subtitle">Сбор информации</span>
+
+	<div class="privacy__part">
+		<div>При оставлении заявки на сайте <strong>win-x-oem.ru</strong> клиенты предоставляют следующие сведения:</div>
+		<div>Имя. (опционально)</div>
+		<div>Контактный E-mail (обязательно).</div>
+		<div>Также администрация сайта получает данные об IP-адресе посетителей, а также о типе браузера, времени нахождения на сайте и прочие подобные сведения. Сбор ведётся с помощью сервисов статистики.</div>
+	</div>
+
+	<span class="privacy__subtitle">Использование информации</span>
+
+	<div class="privacy__part">Вся полученная информация используется администрацией сайта <strong>win-x-oem.ru</strong> исключительно в целях связи с клиентом. Администрация сайта <strong>win-x-oem.ru</strong> имеет право направлять клиенту информационные сообщения (новостную рассылку), если он подписался на них.</div>
+
+	<span class="privacy__subtitle">Защита персональных данных</span>
+
+	<div class="privacy__part">Сайт <strong>win-x-oem.ru</strong> обязуется не разглашать сведения, полученные от клиентов. Она хранится в базе данных на локальном компьютере администрации сайта <strong>win-x-oem.ru</strong>. Доступ к компьютеру надёжно защищён паролем, который имеется только у администратора сайта.</div>
+
+	<span class="privacy__subtitle">Предоставление данных третьим лицам</span>
+
+	<div class="privacy__part">
+		<span>Полученные сведения не могут быть переданы третьим лицам, за исключением следующих случаев:</span>
+		<ul>
+			<li>Для исполнения обязательств перед клиентом – только с его разрешения.</li>
+			<li>В соответствии с обоснованными и применимыми требованиями закона.</li>
+		</ul>
+	</div>
+
+	<span class="privacy__subtitle">По всем вопросам вы можете обращаться к администрации сайта.</span>
+
+	<div class="privacy__part">
+		<div>Телефон: +7 (927) 107-11-39</div>
+		<div>E-mail: winx.oem@yandex.ru</div>
+		<div><a href="https://telegram.me/winxoem_bot">Telegram</a></div>
+	</div>
+
+	<div>Настоящая редакция политики конфиденциальности опубликована 1 августа 2017 года.</div>
+
+</div>
+<!-- end privacy -->

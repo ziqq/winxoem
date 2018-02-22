@@ -7,5 +7,7 @@
 
 //=include ../../bower_components/fancybox/dist/jquery.fancybox.js
 
+//=include ../libs/slick/slick.js
+
 // =include assets/sprite-svg.js
 //=include ../../bower_components/svg4everybody/dist/svg4everybody.js

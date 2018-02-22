@@ -6,7 +6,7 @@ var imagemin    = require('gulp-imagemin');
 var config      = require('../../config');
 
 gulp.task('sprite:png', function() {
-    var spriteData = gulp.src(config.src.icons + '/*.png')
+    var spriteData = gulp.src(config.src.iconsPng + '/*.png')
     .pipe(plumber({
         errorHandler: config.errorHandler
     }))

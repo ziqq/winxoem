@@ -1,10 +1,15 @@
 //footere
 .footer
-	padding: 50px 0
 	color: #fff
 	background: $color-bg--dark url('../img/general/footer-bg.jpg') no-repeat
 	+rmin(1024)
 		+cover
+	&__top
+		padding: 50px 0
+	&__bottom
+		padding: 15px 0
+		border-top: 1px solid #333
+		+clr
 
 	//footer__form
 	&__form
@@ -17,3 +22,32 @@
 					text-align: center
 				input
 					width: 100%
+		.form-order
+			&__buttons
+				+clr
+			&__btn
+				float: right
+				+r(375)
+					float: none
+
+.copyright
+	display: inline-block
+	font-size: 14px
+	color: #666
+
+.footer-for-users
+	display: inline-block
+	float: right
+	+r(480)
+		float: none
+	a
+		font-size: 14px
+		color: #666
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+		&:last-child
+			margin-left: 15px
+			+r(480)
+				display: block
+				margin-left: 0

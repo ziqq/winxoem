@@ -55,14 +55,26 @@ img ,.img-responsive
 	display: block
 	max-width: 100%
 
+a
+	text-decoration: none
+	&:hover
+		text-decoration: underline
+
 section
 	padding: 50px 0 60px
+	background-color: #fff
+	&.bg--dark
+		background: $color-bg--dark url('../img/general/footer-bg.jpg') no-repeat
+
 
 .bg--dark
 	color: #fff
 	.s-title
 		color: #fff
+		&__title
+			font-family: oswald-300, sans-serif
 		&__desc
+			font-family: $f
 			color: rgba(#fff, .7)
 
 .rub
@@ -71,6 +83,12 @@ section
 
 .num
 	font-family: $f-num
+
+.color
+	&-green
+		color: #01C854
+	&-blue
+		color: $color-main--light
 
 .windows
 	display: none
@@ -85,6 +103,8 @@ section
 			box-shadow: 0 1px 20px #000
 
 .container
+	lost-center: 1200px
+	lost-utility: clearfix
 	+r(1200)
 		padding: 0 10px
 
@@ -103,9 +123,10 @@ section
 	color: #000
 	&__title
 		text-transform: uppercase
-		font-family: oswald-300, sans-serif
+		font-family: oswald-400, sans-serif
 		letter-spacing: 1px
 	&__desc
+		margin-top: 15px
 		font-family: $f-light
 		color: rgba(#000, .7)
 		
@@ -126,6 +147,8 @@ section
 	text-align: center
 	text-decoration: none
 	text-transform: uppercase
+	&:hover
+		text-decoration: none
 
 	+r(480)
 		+gradient
@@ -152,13 +175,13 @@ section
 			box-shadow: 0 4px 10px rgba($color-main--light, .7)
 
 //form
-.form
+.form-order
 	max-width: 768px
 	margin: 0 auto
 	+clr
-
-	//form__inner
-	&__inner
+	&.success
+		.form__success
+			transform: translateY(0)
 
 	//form__title
 	&__title
@@ -187,11 +210,22 @@ section
 	&__buttons
 		text-align: center
 
-	//form__btn
-	&__btn
-		float: right
-		+r(375)
-			float: none
+	//form__success
+	&__success
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 30px
+		text-align: center
+		background: $color-bg--dark url('../img/general/popup-bg.png') top left no-repeat
+		+coverdiv
+		z-index: 999
+		+tr
+		transform: translateY(-100%)
+		span
+			margin: auto
+			text-transform: uppercase
+			font-size: 20px
 
 //input
 .input
@@ -307,71 +341,6 @@ section
 					span
 						color: #ff8c00
 						font-family: $f-bold
-			
 
-
-//Modal Window
-.fancybox-is-open
-	.fancybox-bg
-		opacity: 0.6
-.compensate-for-scrollbar
-	margin-right: 5px !important
-.fancybox-close-small:hover:after
-	background-color: transparent
-	color: #fff
-
-.wx-window
-	max-width: 425px
-	padding: 25px 30px 35px
-	color: #fff
-	background: $color-bg--dark url('../img/general/popup-bg.png') top left no-repeat
-	//wx-window__wrap
-	&__wrap
-	//wx-window__title
-	&__title
-		margin-bottom: 5px
-		font-family: oswald-300, sans-serif
-		letter-spacing: 1.5px
-		text-transform: uppercase
-		text-align: center
-	//wx-window__subtitle
-	&__subtitle
-		margin-bottom: 20px
-		font-family: $f-light
-		font-size: 15px
-		text-align: center
-		opacity: .7
-
-.order
-	&__title
-		display: block
-		margin-bottom: 15px
-		color: #909090
-	&__item
-		margin-bottom: 15px
-	.form
-		&__inner
-			margin-bottom: 20px
-		&__input
-			display: block
-			max-width: 200px
-			margin-right: 0
-			&_radio
-				display: inline-block
-				margin-right: 15px
-				&:last-child
-					margin-right: 0
-		&__btn
-			float: none
-	.input
-		&:not(.input_radio)
-			margin-right: 0
-			width: 100%
-
-
-.b24-widget-button-position-bottom-right
-	bottom: 20px!important
-	right: 20px!important
-
-
-@import layouts
+@import modules/wx-style
+@import modules/popup

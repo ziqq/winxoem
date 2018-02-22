@@ -1,15 +1,23 @@
 $icons: (0:0)
-$icons: map-merge($icons,('close-dark': (X: 0px, Y:0px, W: 128px, H: 128px, TW: 266px, TH: 236px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('close-white': (X: -138px, Y:0px, W: 128px, H: 128px, TW: 266px, TH: 236px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('facebook': (X: -34px, Y:-212px, W: 10px, H: 19px, TW: 266px, TH: 236px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('facebook@2x': (X: -74px, Y:-138px, W: 20px, H: 38px, TW: 266px, TH: 236px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('instagram': (X: -104px, Y:-138px, W: 24px, H: 24px, TW: 266px, TH: 236px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('instagram_hover': (X: 0px, Y:-212px, W: 24px, H: 24px, TW: 266px, TH: 236px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('play-btn': (X: 0px, Y:-138px, W: 64px, H: 64px, TW: 266px, TH: 236px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('vk': (X: -206px, Y:-138px, W: 24px, H: 24px, TW: 266px, TH: 236px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('vk_hover': (X: -240px, Y:-138px, W: 24px, H: 24px, TW: 266px, TH: 236px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('youtube': (X: -138px, Y:-138px, W: 24px, H: 24px, TW: 266px, TH: 236px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('youtube_hover': (X: -172px, Y:-138px, W: 24px, H: 24px, TW: 266px, TH: 236px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('arrow-long': (X: -320px, Y:-276px, W: 125px, H: 20px, TW: 448px, TH: 434px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('arrow-long@2x': (X: 0px, Y:-320px, W: 250px, H: 40px, TW: 448px, TH: 434px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('call': (X: -160px, Y:-160px, W: 150px, H: 150px, TW: 448px, TH: 434px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('close-dark': (X: -320px, Y:0px, W: 128px, H: 128px, TW: 448px, TH: 434px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('close-white': (X: -320px, Y:-138px, W: 128px, H: 128px, TW: 448px, TH: 434px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('consultation': (X: -160px, Y:0px, W: 150px, H: 150px, TW: 448px, TH: 434px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('facebook': (X: -308px, Y:-370px, W: 10px, H: 19px, TW: 448px, TH: 434px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('facebook@2x': (X: -74px, Y:-370px, W: 20px, H: 38px, TW: 448px, TH: 434px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('instagram': (X: -172px, Y:-370px, W: 24px, H: 24px, TW: 448px, TH: 434px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('instagram_hover': (X: -274px, Y:-370px, W: 24px, H: 24px, TW: 448px, TH: 434px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('pay': (X: 0px, Y:-160px, W: 150px, H: 150px, TW: 448px, TH: 434px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('play-btn': (X: 0px, Y:-370px, W: 64px, H: 64px, TW: 448px, TH: 434px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('rating--gray': (X: -260px, Y:-320px, W: 70px, H: 14px, TW: 448px, TH: 434px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('rating': (X: -340px, Y:-320px, W: 70px, H: 14px, TW: 448px, TH: 434px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('send': (X: 0px, Y:0px, W: 150px, H: 150px, TW: 448px, TH: 434px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('vk': (X: -206px, Y:-370px, W: 24px, H: 24px, TW: 448px, TH: 434px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('vk_hover': (X: -240px, Y:-370px, W: 24px, H: 24px, TW: 448px, TH: 434px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('youtube': (X: -104px, Y:-370px, W: 24px, H: 24px, TW: 448px, TH: 434px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('youtube_hover': (X: -138px, Y:-370px, W: 24px, H: 24px, TW: 448px, TH: 434px, IMG: '../img/sprite.png')))
 
 
 // Gets an attribute from the sass map
@@ -46,69 +54,117 @@ $icons: map-merge($icons,('youtube_hover': (X: -172px, Y:-138px, W: 24px, H: 24p
   +sprite-retina($i)  
 
 //
+//.icon-arrow-long
+//  width: 125px
+//  height: 20px
+//  background-image: url('../img/sprite.png')
+//  background-position: -320px -276px
+//
+//.icon-arrow-long@2x
+//  width: 250px
+//  height: 40px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -320px
+//
+//.icon-call
+//  width: 150px
+//  height: 150px
+//  background-image: url('../img/sprite.png')
+//  background-position: -160px -160px
+//
 //.icon-close-dark
 //  width: 128px
 //  height: 128px
 //  background-image: url('../img/sprite.png')
-//  background-position: 0px 0px
+//  background-position: -320px 0px
 //
 //.icon-close-white
 //  width: 128px
 //  height: 128px
 //  background-image: url('../img/sprite.png')
-//  background-position: -138px 0px
+//  background-position: -320px -138px
+//
+//.icon-consultation
+//  width: 150px
+//  height: 150px
+//  background-image: url('../img/sprite.png')
+//  background-position: -160px 0px
 //
 //.icon-facebook
 //  width: 10px
 //  height: 19px
 //  background-image: url('../img/sprite.png')
-//  background-position: -34px -212px
+//  background-position: -308px -370px
 //
 //.icon-facebook@2x
 //  width: 20px
 //  height: 38px
 //  background-image: url('../img/sprite.png')
-//  background-position: -74px -138px
+//  background-position: -74px -370px
 //
 //.icon-instagram
 //  width: 24px
 //  height: 24px
 //  background-image: url('../img/sprite.png')
-//  background-position: -104px -138px
+//  background-position: -172px -370px
 //
 //.icon-instagram_hover
 //  width: 24px
 //  height: 24px
 //  background-image: url('../img/sprite.png')
-//  background-position: 0px -212px
+//  background-position: -274px -370px
+//
+//.icon-pay
+//  width: 150px
+//  height: 150px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -160px
 //
 //.icon-play-btn
 //  width: 64px
 //  height: 64px
 //  background-image: url('../img/sprite.png')
-//  background-position: 0px -138px
+//  background-position: 0px -370px
+//
+//.icon-rating--gray
+//  width: 70px
+//  height: 14px
+//  background-image: url('../img/sprite.png')
+//  background-position: -260px -320px
+//
+//.icon-rating
+//  width: 70px
+//  height: 14px
+//  background-image: url('../img/sprite.png')
+//  background-position: -340px -320px
+//
+//.icon-send
+//  width: 150px
+//  height: 150px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px 0px
 //
 //.icon-vk
 //  width: 24px
 //  height: 24px
 //  background-image: url('../img/sprite.png')
-//  background-position: -206px -138px
+//  background-position: -206px -370px
 //
 //.icon-vk_hover
 //  width: 24px
 //  height: 24px
 //  background-image: url('../img/sprite.png')
-//  background-position: -240px -138px
+//  background-position: -240px -370px
 //
 //.icon-youtube
 //  width: 24px
 //  height: 24px
 //  background-image: url('../img/sprite.png')
-//  background-position: -138px -138px
+//  background-position: -104px -370px
 //
 //.icon-youtube_hover
 //  width: 24px
 //  height: 24px
 //  background-image: url('../img/sprite.png')
-//  background-position: -172px -138px
+//  background-position: -138px -370px
 //

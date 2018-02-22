@@ -44,6 +44,7 @@
     "gulp-include": "^2.0.3",
     "gulp-inject-string": "^1.1.0",
     "gulp-jade": "^1.1.0",
+    "gulp-js-import": "^1.0.6",
     "gulp-notify": "^3.0.0",
     "gulp-nunjucks-render": "^2.0.0",
     "gulp-plumber": "^1.0.1",
