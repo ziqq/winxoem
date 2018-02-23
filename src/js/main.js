@@ -72,7 +72,7 @@ $(document).ready(function () {
 			nextArrow: '.wx-slider__arrow--next',
 			prevArrow: '.wx-slider__arrow--prev',
 			infinite: true,
-			slidesToShow: 5,
+			slidesToShow: 8,
 			slidesToScroll: 1,
 			speed: 1000,
 			autoplaySpeed: 5000,
@@ -80,25 +80,36 @@ $(document).ready(function () {
 			dots: false,
 			responsive: [{
 
-				breakpoint: 1201,
+				breakpoint: 1025,
 				settings: {
-					slidesToShow: 3
+					slidesToShow: 6
+				}
+			},{
+
+				breakpoint: 1025,
+				settings: {
+					slidesToShow: 5
 				}
 
 			}, {
 
 				breakpoint: 769,
 				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 1
+					slidesToShow: 3
 				}
 
 			},{
 
 				breakpoint: 481,
 				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1
+					slidesToShow: 2
+				}
+
+			},{
+
+				breakpoint: 376,
+				settings: {
+					slidesToShow: 1
 				}
 
 			}]
