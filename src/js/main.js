@@ -33,13 +33,14 @@ $(document).ready(function () {
 			var dataForm = $(this).data('form');
 			var dataTitle = $(this).data('title');
 
-			$('.wx-window__title').text(dataTitle);
+			$('.form-order .wx-window__title').text(dataTitle);
+			$('.form-order .admin-data').val(dataForm);
 		});
 	}
 
 	//Masked Input
 	if($('.js-phone-mask').length > 0){
-		$('.js-phone-mask').mask("+7 (999) 999-9999");
+		$('.js-phone-mask').mask("+7 (999) 999-99-99");
 	}
 
 	//Input Fpcus & Blur
@@ -116,22 +117,22 @@ $(document).ready(function () {
 		});
 	}
 	
-	$(".form").submit(function() {
-		var _this = $(this);
+	$('.form-order').submit(function() {
+		var th = $(this);
 		$.ajax({
 			type: "POST",
 			url: "mail.php",
-			data: _this.serialize()
+			data: th.serialize()
 		}).done(function() {
-			$('.form').addClass('.success');
+			$('.form-order').addClass('is-success');
 			setTimeout(function() {
-				_this.trigger("reset");
-				$('.form').removeClass('.success');
+				th.trigger("reset");
+				$('.js-input').removeClass('is-focus').find('input').val('');
+				$('.form-order').removeClass('is-success');
 				$.fancybox.close();
 			}, 3000);
 		});
 		return false;
 	});
-
 
 });

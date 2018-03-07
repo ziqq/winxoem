@@ -47,18 +47,18 @@ gulp.task('sass', function() {
 		.pipe(gulp.dest(config.dest.css));
 });
 
-gulp.task('sass:libs', function() {
-	return gulp
-		.src(config.dest.css + '/libs.css')
-		.pipe(rename({suffix: '.min', prefix : ''}))
-		.on('error', config.errorHandler)
-		.pipe(postcss(processorsMin))
-		.pipe(gulp.dest(config.dest.css));
-});
+// gulp.task('sass:libs', function() {
+// 	return gulp
+// 		.src(config.dest.css + '/libs.css')
+// 		.pipe(rename({suffix: '.min', prefix : ''}))
+// 		.on('error', config.errorHandler)
+// 		.pipe(postcss(processorsMin))
+// 		.pipe(gulp.dest(config.dest.css));
+// });
 
 gulp.task('sass:watch', function() {
 	gulp.watch(config.src.sass + '/**/*.{sass,scss}', ['sass']);
-	gulp.watch(config.src.sass + '/libs.{sass,scss}', ['sass:libs']);
+	// gulp.watch(config.src.sass + '/libs.{sass,scss}', ['sass:libs']);
 });
 
 function isMax(mq) {

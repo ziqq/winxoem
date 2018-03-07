@@ -1,0 +1,9 @@
+User-agent: Googlebot-Image
+Allow: /img/
+ 
+User-agent: YandexImages
+Allow: /img/
+
+Host: https://win-x-oem.ru
+
+Sitemap: https://win-x-oem.ru/sitemap.xml

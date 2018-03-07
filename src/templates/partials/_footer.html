@@ -9,24 +9,33 @@
 				<p class="s-title__desc">Оставте заявку или зайдайте Ваш вопрос и наш менеджер ответит Вам в течении 15 мин.</p>
 			</div>
 
-			<form class="form-order footer__form">
+			<form class="form-order footer__form" autocomplete="off">
+
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="winXoem">
+				<input type="hidden" name="admin_email" value="winx.oem@ya.ru">
+				<input class="admin-data" type="hidden" name="form_subject" value="Вопросы">
+				<!-- END Hidden Required Fields -->
+				
+				<div class="form-order__success form-success form-success--big">Ваш вопрос отправлен. В ближайшее время наши менеджеры Вам ответят.</div>
+
 				<div class="form-order__inner">
 					<div class="input__wrap">
 						<label class="input js-input">
 							<span class="input__title">Ваше имя</span>
-							<input type="text" name="Имя">
+							<input type="text" name="Имя" required>
 						</label>
 						<label class="input js-input">
 							<span class="input__title">Ваш e-mail</span>
-							<input type="email" name="Имя">
+							<input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
 						</label>
 					</div>
 				</div>
-				<textarea class="form-order__textarea"></textarea>
+				<textarea class="form-order__textarea" name="Вопрос"></textarea>
 				<div class="form-order__buttons">
 					<input type="submit" value="Задать вопрос" class="form-order__btn button button_gr">
 					<div class="footer__policy policy">
-						Нажимая на кнопку "Задать вопрос" Вы атоматически даете согласие на обработку<a href="#" target="_blank">персональных данных</a> и принимете условия <a href="#" target="_blank">пользовательского соглашения</a>
+						Нажимая кнопку "Задать вопрос" Вы атоматически даете согласие на обработку<a href="#privacy" target="_blank" data-fancybox>персональных данных</a>.
 					</div>
 				</div>			
 			</form>
@@ -39,7 +48,6 @@
 			<div class="copyright">Win-X-Oem.ru &copy; 2017-2018</div>
 			<div class="footer-for-users">
 				<a href="#privacy" data-fancybox>Политика конфиденциалности</a>
-				<a href="#terms" data-fancybox>Пользовательское соглашение</a>
 			</div>			
 		</div>
 	</div>

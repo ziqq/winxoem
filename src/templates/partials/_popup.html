@@ -3,36 +3,36 @@
 	<div class="wx-window__wrap">
 		<h3 class="wx-window__title">Оставте заявку сейчас</h3>
 		<p class="wx-window__subtitle">Оставте заявку и наш менеджер свяжется с Вами в течении 15 мин.</p>
-		<form class="form-order">
+		<form class="form-order" onsubmit="yaCounter47820397.reachGoal('sendform'); return true;" autocomplete="off">
 
 			<!-- Hidden Required Fields -->
 			<input type="hidden" name="project_name" value="winXoem">
-			<input type="hidden" name="admin_email" value="winx.oem@yandex.ru">
-			<input type="hidden" name="form_subject" value="Заказ">
+			<input type="hidden" name="admin_email" value="winx.oem@ya.ru">
+			<input class="admin-data" type="hidden" name="form_subject" value="Заказ">
 			<!-- END Hidden Required Fields -->
 
 			<div class="form-order__inner">
 				<div class="order__item">
 					<label class="input js-input">
 						<span class="input__title">Ваше имя</span>
-						<input type="text" name="Имя">
+						<input type="text" name="Имя" required>
 					</label>
 				</div>
 				<div class="order__item">
 					<label class="input js-input">
 						<span class="input__title">Ваш телефон</span>
-						<input class="js-phone-mask" type="tel" name="Телефон">
+						<input class="js-phone-mask" type="tel" name="Телефон" required>
 					</label>
 				</div>
 			</div>
 			<div class="form-order__buttons">
 				<input type="submit" value="Заказать" class="form-order__btn button button_gr">
 				<div class="policy">
-					Нажимая на кнопку "Заказать" Вы атоматически даете согласие на обработку<a href="#" target="_blank">персональных данных</a> и принимете условия <a href="#" target="_blank">пользовательского соглашения</a>
+					Нажимая кнопку "Заказать" Вы атоматически даете согласие на обработку<a href="#privacy" target="_blank" data-fancybox>персональных данных</a>.
 				</div>
 			</div>
 
-			<div class="form-order__success">
+			<div class="form-order__success form-success">
 				<span>Спасибо за заявку!</span>
 			</div>
 		</form>
@@ -48,9 +48,10 @@
 	<span class="privacy__subtitle">Сбор информации</span>
 
 	<div class="privacy__part">
-		<div>При оставлении заявки на сайте <strong>win-x-oem.ru</strong> клиенты предоставляют следующие сведения:</div>
-		<div>Имя. (опционально)</div>
-		<div>Контактный E-mail (обязательно).</div>
+		<div>При подаче заявки на сайте <strong>win-x-oem.ru</strong> клиенты предоставляют следующие сведения:</div>
+		<div>Имя (обязательно)</div>
+		<div>Контактный E-mail (обязательно)</div>
+		<div>Контактный Телефон (обязательно)</div>
 		<div>Также администрация сайта получает данные об IP-адресе посетителей, а также о типе браузера, времени нахождения на сайте и прочие подобные сведения. Сбор ведётся с помощью сервисов статистики.</div>
 	</div>
 
@@ -77,10 +78,9 @@
 	<div class="privacy__part">
 		<div>Телефон: +7 (927) 107-11-39</div>
 		<div>E-mail: winx.oem@yandex.ru</div>
-		<div><a href="https://telegram.me/winxoem_bot">Telegram</a></div>
 	</div>
 
-	<div>Настоящая редакция политики конфиденциальности опубликована 1 августа 2017 года.</div>
+	<div>Настоящая редакция политики конфиденциальности опубликована 8 марта 2018 года.</div>
 
 </div>
 <!-- end privacy -->

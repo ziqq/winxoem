@@ -63,8 +63,29 @@ a
 section
 	padding: 50px 0 60px
 	background-color: #fff
+	position: relative
+	&::after
+		content: ''
+		display: block
+		+arr(40, 18, #fff, b)
+		+vx
+		bottom: -18px
+		z-index: 99
+	&:last-child
+		&::after
+			display: none
+
 	&.bg--dark
 		background: $color-bg--dark url('../img/general/footer-bg.jpg') no-repeat
+		&::after
+			+arr(40, 18, $color-bg--dark, b)
+
+input
+	outline: none
+input:-webkit-autofill
+    -webkit-box-shadow: inset 0 0 0 50px $color-bg--dark !important
+    -webkit-text-fill-color: #fff !important
+    color: #fff !important
 
 
 .bg--dark
@@ -72,7 +93,7 @@ section
 	.s-title
 		color: #fff
 		&__title
-			font-family: oswald-300, sans-serif
+			font-family: oswald-400, sans-serif
 		&__desc
 			font-family: $f
 			color: rgba(#fff, .7)
@@ -123,7 +144,7 @@ section
 	color: #000
 	&__title
 		text-transform: uppercase
-		font-family: oswald-400, sans-serif
+		font-family: oswald-500, sans-serif
 		letter-spacing: 1px
 	&__desc
 		margin-top: 15px
@@ -179,9 +200,15 @@ section
 	max-width: 768px
 	margin: 0 auto
 	+clr
-	&.success
-		.form__success
+	&.is-success
+		.form-success
 			transform: translateY(0)
+			&--big		
+				opacity: 1
+				visibility: visible	
+				& ~ *
+					opacity: .5;
+					filter: blur(15px);
 
 	//form__title
 	&__title
@@ -212,20 +239,30 @@ section
 
 	//form__success
 	&__success
-		display: flex
-		align-items: center
-		justify-content: center
-		padding: 30px
-		text-align: center
-		background: $color-bg--dark url('../img/general/popup-bg.png') top left no-repeat
-		+coverdiv
-		z-index: 999
-		+tr
-		transform: translateY(-100%)
-		span
-			margin: auto
-			text-transform: uppercase
-			font-size: 20px
+
+.form-success
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 30px
+	text-align: center
+	background: $color-bg--dark url('../img/general/popup-bg.png') top left no-repeat
+	+coverdiv
+	z-index: 999
+	+tr
+	transform: translateY(-100%)
+	span
+		margin: auto
+		text-transform: uppercase
+		font-size: 20px
+
+	&--big
+		opacity: 0
+		visibility: hidden
+		background-image: none
+		background-color: rgba($color-bg--dark, .7)
+		transform: translateY(0)
+		+tr(.5s)
 
 //input
 .input

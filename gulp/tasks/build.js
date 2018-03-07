@@ -9,7 +9,7 @@ function build(cb) {
         'sprite:png',
         'js:all',
         'sass',
-        'sass:libs',
+        // 'sass:libs',
         'nunjucks',
         'copy',
         'list-pages',

@@ -6,7 +6,7 @@
 
 	<title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
 
-	<meta name="description" content="Купить Windows 10 Pro дешево с большими скидками" />	
+	<meta name="description" content="Купить Windows 10 Pro дешево со скидками" />	
 	<meta name="keywords" content="Windows 10, Pro, OEM, key, 64bit, 32bit, ключ, ключи, купить, windows 10 pro oem купить, windows 10 pro купить, купить ключ windows 10 pro, купить windows 10 64 bit pro лицензия, купить windows 10 32 bit pro лицензия"/>
 
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -22,15 +22,8 @@
 
 	<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32">
 	<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96">
-	<link rel="shortcut icon" type="image/x-icon" href="img/favicon/favicon.ico" sizes="16x16">
-	<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-touch-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-touch-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-touch-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-touch-icon-152x152.png">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" sizes="16x16">
+	<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-touch-icon.png">
 
 	<!-- {#{% include "../partials/_media-tags.html" %}#} -->
 
@@ -45,9 +38,6 @@
 		</div>
 		{% include "partials/_footer.html" %}
 	</div>
-	
-	<div class="overlay"></div>
-	<div class="go-top js-goTop"></div>
 
 	<!-- begin windows -->
 	<div class="windows">
@@ -60,12 +50,17 @@
 	<!-- begin svg -->
 	{% include "partials/_svg.html" %}
 	<!-- end svg -->
+
 	<script data-skip-moving="true">
 		(function(w,d,u){
 			var s=d.createElement('script');s.async=1;s.src=u+'?'+(Date.now()/60000|0);
 			var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
 		})(window,document,'https://cdn.bitrix24.ru/b5911999/crm/site_button/loader_1_u50lh2.js');
 	</script>
+
+	<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter47820397 = new Ya.Metrika({ id:47820397, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/47820397" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
+
 </body>
 </html>
 
