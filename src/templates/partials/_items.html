@@ -1,0 +1,125 @@
+{% import "partials/assets/_mixins.html" as mixin %}
+
+<!--
+<div class="dropdown js-dropdown">
+	наведи сюда
+	<div class="dropdown__list">это появится</div>
+</div>
+-->
+
+{% macro btn(title, class) %}
+<button class="button {{ class }}">{{ title }}</button>
+{% endmacro %}
+<!-- item.bnt('Купить', 'class') -->
+
+{% macro btnLink(title, class, href="#") %}
+<a {{ href }} class="button {{ class }}">{{ title }}</a>
+{% endmacro %}
+<!-- item.bnt('Купить', 'class') -->
+
+{% macro checkbox(title, class, checked) %}
+<label class="checkbox {{class}}">
+	<input type="checkbox" {{checked}}>
+	<span class="checkbox__box"></span>
+	<span class="checkbox__title">{{title}}</span>
+</label>
+{% endmacro %}
+<!-- item.checkbox('мужской', 'checkbox--radio, profile-editor__checkbox') -->
+
+{% macro radio(title, name, class) %}
+<label class="checkbox checkbox--radio {{class}}">
+	<input type="radio" name="{{name}}">
+	<span class="checkbox__box"></span>
+	<span class="checkbox__title">{{title}}</span>
+</label>
+{% endmacro %}
+<!-- item.checkbox('мужской', 'checkbox--radio, profile-editor__checkbox') -->
+
+{% macro policy(class) %}
+<div class="policy js-policy {{class}}">
+	Заполняя форму, Вы соглашаетесь на обработку персональных данных в соответствии с
+	<a href="#" target="_blank">Условиями пользовательского соглашения</a>.
+</div>
+{% endmacro %}
+<!-- item.policy('Купить', 'class') -->
+
+{% macro social(class) %}
+<div class="social {{ class }}">
+	<ul class="social__list">
+		<li class="social__item" tooltip="мы в vkontakte">
+			<a href="#" class="social__link social__link--vk"></a>
+		</li>
+		<li class="social__item" tooltip="мы в odnoklasniki">
+			<a href="#" class="social__link social__link--ok"></a>
+		</li>
+		<li class="social__item" tooltip="мы в instagram">
+			<a href="#" class="social__link social__link--inst"></a>
+		</li>
+	</ul>
+</div>
+{% endmacro %}
+
+{% macro starRating() %}
+<div class="star-rating">
+	<div class="star-rating__wrap">
+		<input class="star-rating__input" id="star-rating-5" type="radio" name="rating" value="5">
+		<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-5" title="5 из 5"></label>
+		<input class="star-rating__input" id="star-rating-4" type="radio" name="rating" value="4">
+		<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-4" title="4 из 5"></label>
+		<input class="star-rating__input" id="star-rating-3" type="radio" name="rating" value="3">
+		<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-3" title="3 из 5"></label>
+		<input class="star-rating__input" id="star-rating-2" type="radio" name="rating" value="2">
+		<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-2" title="2 из 5"></label>
+		<input class="star-rating__input" id="star-rating-1" type="radio" name="rating" value="1">
+		<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-1" title="1 из 5"></label>
+	</div>
+</div>
+{% endmacro %}
+
+{% macro productItem(class) %}
+<a href="#" class="product-item js-product-item" itemscope itemtype="http://schema.org/Product">
+	<div class="product-item__img">
+		<img class="product-item__image" src="img/products/atlas/1.png" alt="Атлас дюпон" itemprop="image">
+		<button class="button-icon button-icon--fav js-button-icon--fav product-item__fav"></button>
+	</div>
+	<div class="product-item__desc">
+		<div class="product-item__box">
+			<h5 class="h5 product-item__title" itemprop="name">Атлас дюпон
+				<span>white</span>
+			</h5>
+			<span class="product-item__articul">ам07</span>
+		</div>
+		<div class="product-item__box">
+			<div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+				<meta itemprop="price" content="300.00">
+				<meta itemprop="priceCurrency" content="RUB" /> 300
+				<i class="fal fa-ruble-sign"></i>
+			</div>
+			<div class="product-item__color-count color-count">18 цветов</div>
+		</div>
+		<div class="product-item__more">
+			<div class="product-item__color color">
+				<ul class="color__list">
+					<li class="color__item" data-color="img/products/atlas/1.png">
+						<img class="color__img" src="img/products/atlas/colors/1.png" alt="alt">
+					</li>
+					<li class="color__item" data-color="img/products/atlas/2.png">
+						<img class="color__img" src="img/products/atlas/colors/2.png" alt="alt">
+					</li>
+					<li class="color__item" data-color="img/products/atlas/3.png">
+						<img class="color__img" src="img/products/atlas/colors/3.png" alt="alt">
+					</li>
+					<li class="color__item" data-color="img/products/atlas/4.png">
+						<img class="color__img" src="img/products/atlas/colors/4.png" alt="alt">
+					</li>
+				</ul>
+			</div>
+
+			<button class="button button--transparent button--muted product-item__btn" onclick= "pushUp();">Добавить в корзину</button>
+
+			<button class="button button--transparent button--default product-item__btn">Подробнее</button>
+
+		</div>
+	</div>
+</a>
+{% endmacro %}

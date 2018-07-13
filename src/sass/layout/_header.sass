@@ -1,0 +1,114 @@
+.header
+	min-height: 100vh
+	background-position: center right
+	position: relative
+	background: url('../img/general/header-bg.png') no-repeat center right, linear-gradient(to right, $color-main--light 0%, $color-main 100%)
+	background-attachment: fixed
+	position: relative
+	+r(480)
+		background-size: contain
+
+.logo
+	display: inline-block
+	vertical-align: middle
+	font-size: 62px
+	font-weight: bold
+	line-height: 1
+	color: #fff
+	sup, sub
+		position: relative
+		font-size: 18px
+	sup
+		top: -25px
+	sub
+		bottom: -1px
+		right: 16px
+
+.callback
+	float: right
+	display: inline-block
+	vertical-align: middle
+	margin-top: 14px
+	text-align: right
+	&__link
+		display: block
+		padding-left: 35px
+		vertical-align: middle
+		text-decoration: none
+		font-family: $f-bold
+		color: #fff
+		position: relative
+		.icon
+			width: 28px
+			height: 28px
+			fill: #fff
+			position: absolute
+			top: -1px
+			left: 0
+	&__text
+		text-decoration: none
+		font-size: 13px
+		color: #fff
+		&:hover
+			text-decoration: underline
+
+//offer
+.offer
+	margin-left: 10%
+	color: #fff
+	+vy
+	+r(480)
+		margin-left: 0
+	//innner
+	&__inner
+	//title
+	&__title
+		margin-bottom: 60px
+		font-size: 55px
+		line-height: 1.3
+		font-family: $f-neo-b
+		+r(480)
+			font-size: 37px
+			br
+				display: none
+		+r(375)
+			font-size: 33px
+		+r(320)
+			font-size: 28px
+		span
+			display: block
+			margin: 30px 0
+			font-size: 32px
+			text-transform: initial
+			+r(480)
+				font-size: 20px
+		strong
+			text-transform: uppercase
+		small
+			font-family: $f-neo-r
+			font-size: 23px
+	//subtitle
+	&__subtitle
+		display: inline-block
+		margin-right: 30px
+		font-size: 32px
+		line-height: 1
+	//price
+	&__price
+		margin-bottom: 70px
+		+r(320)
+			margin-bottom: 50px
+	//benefits
+	&__button
+		display: block
+		+r(480)
+			margin: auto
+
+//price
+.price
+	display: inline-block
+	&__new
+		font-family: oswald-600, sans-serif
+		font-size: 60px
+	.fa
+		font-size: 30px

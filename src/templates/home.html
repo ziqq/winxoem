@@ -1,5 +1,16 @@
 ---
 title: Купить Windows 10 Pro Дешево со Скидками
+
+payment:
+ - link: https://qiwi.com/
+   icon: 'pay-qiwi'
+ - link: https://money.yandex.ru
+   icon: 'pay-yandex'
+ - link: https://online.sberbank.ru
+   icon: 'pay-sber'
+ - link: https://www.tinkoff.ru/
+   icon: 'pay-tinkoff'
+
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -9,7 +20,7 @@ title: Купить Windows 10 Pro Дешево со Скидками
 <section class="whywe bg--dark">
 	<div class="container">
 		<div class="s-title">
-			<h2 class="s-title__title">У нас выгодно</h2>
+			<h2 class="s-title__title">У нас выгодно покупать</h2>
 		</div>
 
 		<!-- begin payment__items -->
@@ -20,7 +31,7 @@ title: Купить Windows 10 Pro Дешево со Скидками
 		</div>
 		<!-- end payment__items -->
 	</div>
-	
+
 </section><!-- end whywe -->
 
 <!-- begin payment -->
@@ -32,9 +43,13 @@ title: Купить Windows 10 Pro Дешево со Скидками
 
 		<!-- begin payment__items -->
 		<div class="payment__items">
-			<a href="https://qiwi.com/" class="payment__item">{{mixin.icon('pay-qiwi')}}</a>
-			<a href="https://money.yandex.ru" class="payment__item">{{mixin.icon('pay-yandex')}}</a>
-			<a href="https://online.sberbank.ru" class="payment__item">{{mixin.icon('pay-sber')}}</a>
+			{% for item in payment %}
+			<a href={{item.link}} class="payment__item">
+				<svg class="icon icon-{{item.icon}} ">
+					<use xlink:href="img/sprite.svg#{{item.icon}}"></use>
+				  </svg>
+			</a>
+			 {% endfor %}
 		</div>
 		<!-- end payment__items -->
 	</div>
@@ -48,7 +63,7 @@ title: Купить Windows 10 Pro Дешево со Скидками
 			<h2 class="s-title__title">Скидка <span>15%</span> при оплате на <span>qiwi</span></h2>
 		</div>
 		<a href="#order" class="button button_gr sale__btn"
-		data-fancybox 
+		data-fancybox
 		data-form="Заказ со скидкой"
 		data-title="Заказать со скидкой"
 		onclick="yaCounter47820397.reachGoal('qiwi'); return true;"
@@ -63,7 +78,7 @@ title: Купить Windows 10 Pro Дешево со Скидками
 		<div class="s-title">
 			<h2 class="s-title__title">Как мы работаем</h2>
 		</div>
-		
+
 		<div class="work__items">
 			<div class="work__item work__item_order">Звонок или Заявка</div>
 			<div class="work__item work__item_consalting">Консультация</div>
@@ -87,22 +102,22 @@ title: Купить Windows 10 Pro Дешево со Скидками
 		<div class="wx-slider__arrow wx-slider__arrow--next"></div>
 		<div class="wx-slider__sliders js-wx-slider">
 			{% for i in range(0, 8) %}
-			<div class="wx-slider__slide" itemprop="review" itemscope itemtype="http://schema.org/Review">
+			<div class="wx-slider__slide">
 				<img src="img/reviews/0.jpg" alt="Отзывы клиентов">
 			</div>
-			<div class="wx-slider__slide" itemprop="review" itemscope itemtype="http://schema.org/Review">
+			<div class="wx-slider__slide">
 				<img src="img/reviews/1.jpg" alt="Отзывы клиентов">
 			</div>
-			<div class="wx-slider__slide" itemprop="review" itemscope itemtype="http://schema.org/Review">
+			<div class="wx-slider__slide">
 				<img src="img/reviews/2.jpg" alt="Отзывы клиентов">
 			</div>
-			<div class="wx-slider__slide" itemprop="review" itemscope itemtype="http://schema.org/Review">
+			<div class="wx-slider__slide">
 				<img src="img/reviews/3.jpg" alt="Отзывы клиентов">
 			</div>
-			<div class="wx-slider__slide" itemprop="review" itemscope itemtype="http://schema.org/Review">
+			<div class="wx-slider__slide">
 				<img src="img/reviews/4.jpg" alt="Отзывы клиентов">
 			</div>
-			<div class="wx-slider__slide" itemprop="review" itemscope itemtype="http://schema.org/Review">
+			<div class="wx-slider__slide">
 				<img src="img/reviews/5.jpg" alt="Отзывы клиентов">
 			</div>
 			{% endfor %}﻿

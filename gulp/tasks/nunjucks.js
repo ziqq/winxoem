@@ -26,10 +26,9 @@ function renderHtml(onlyChanged) {
             path: [config.src.templates]
         }))
         .pipe(prettify({
-            indent_size: 4,
+            indent_size: 2,
             wrap_attributes: 'auto', // 'force'
             preserve_newlines: false,
-            indent_with_tabs: true,
             // unformatted: [],
             end_with_newline: true
         }))

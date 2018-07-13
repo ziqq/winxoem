@@ -24,7 +24,7 @@
 		#{$property}: #{$min-size}#{$unit}
 	@media (min-width: #{$max-width}#{$unit})
 		#{$property}: #{$max-size}#{$unit}
-		
+
 =fs($sizeValue: 16)
 	font-size: $sizeValue + px
 	font-size: $sizeValue / 10 + rem
@@ -294,7 +294,7 @@
 
 =better-blur($radius)
 	filter: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a' x='0' y='0' width='1' height='1' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='#{$radius}' result='b'/%3E%3CfeMorphology operator='dilate' radius='#{$radius}'/%3E %3CfeMerge%3E%3CfeMergeNode/%3E%3CfeMergeNode in='b'/%3E%3C/feMerge%3E%3C/filter%3E %3C/svg%3E#a")
-	
+
 //transform scale
 =scale($var)
 	-ms-transform: scale($var)
@@ -307,15 +307,15 @@
 		&:before
 			content: counter(list + $var) $sep
 			counter-increment: list + $var
-			
-=check($width, $height, $png)   
+
+=check($width, $height, $png)
 	position: absolute
 	clip: rect(0, 0, 0, 0)
-	&:checked + label:after 
+	&:checked + label:after
 		background-position: 0 $height
-	& + label 
+	& + label
 		cursor: pointer
-		&:after 
+		&:after
 			content: " "
 			display: inline-block
 			position: relative
@@ -335,7 +335,7 @@
 		font-size: $font-size + px
 	@if $letter-spacing != null
 		letter-spacing: ($letter-spacing / 1000) + em
-		
+
 //Font Family
 =font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false )
 	@font-face
@@ -343,7 +343,7 @@
 		font-weight: $weight
 		font-style: $style
 
-		@if $asset-pipeline == true 
+		@if $asset-pipeline == true
 			src: font-url('#{$file-path}.eot')
 			src: font-url('#{$file-path}.eot?#iefix') format('embedded-opentype'), font-url('#{$file-path}.woff') format('woff'), font-url('#{$file-path}.ttf') format('truetype')
 		@else

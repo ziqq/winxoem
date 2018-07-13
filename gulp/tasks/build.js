@@ -1,16 +1,34 @@
-var gulp        = require('gulp');
+var gulp = require('gulp');
 var runSequence = require('run-sequence');
-var config      = require('../config');
+var config = require('../config');
 
 function build(cb) {
     runSequence(
         'clean',
+        'clean:temp',
         'sprite:svg',
         'sprite:png',
-        'js:all',
+        'svgo',
         'sass',
-        // 'sass:libs',
         'nunjucks',
+        // 'js:all',
+        'webpack',
+        'copy',
+        'list-pages',
+        cb
+    );
+}
+
+function buildDev(cb) {
+    runSequence(
+        'clean',
+        'sprite:svg',
+        'sprite:png',
+        'svgo',
+        'sass',
+        'nunjucks',
+        // 'js:build',
+        'webpack',
         'copy',
         'list-pages',
         cb
@@ -20,7 +38,7 @@ function build(cb) {
 gulp.task('build', function(cb) {
     config.setEnv('production');
     config.logEnv();
-    build(cb);
+    buildDev(cb);
 });
 
 gulp.task('build:dev', function(cb) {

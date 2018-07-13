@@ -5,10 +5,14 @@
 <footer itemscope="itemscope" itemtype="http://schema.org/WPFooter"> --- FOOTER
 
 <div class="addr" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"> --- ADRESS
-	<span itemprop="streetAddress">Каширское шоссе, д. 9, корп.1</span>, 
-	<span class="metro">м. Каширская</span>, 
-	<span itemprop="addressLocality">Москва</span>, 
+	<span itemprop="streetAddress">Каширское шоссе, д. 9, корп.1</span>
+	<span class="metro">м. Каширская</span>
+	<span itemprop="addressLocality">Москва</span>
 	<span itemprop="addressCountry">Россия</span>
+</div>
+
+<div class="logo" itemscope itemprop="logo" itemtype="http://schema.org/Organization">
+	<a href="home.html" class="logo__link" itemprop="url">beauty <span>box</span></a>
 </div>
 
 <div class="box-contacts-info style-head" itemscope itemtype="http://schema.org/PostalAddress"> --- ADRESS BLOCK
@@ -42,5 +46,48 @@
 <a class="couching-item js-couching-item" itemprop="video" itemscope itemtype="http://schema.org/VideoObject"> --- Video
 
 
- 
- 
+
+
+// Colors
+$color-facebook  : #3B5998;
+$color-twitter   : #55ACEE;
+$color-pinterest : #CC2127;
+$color-youtube   : #E52D27;
+
+// Icons
+$icon-facebook   : url('img/assets/facebook.png');
+$icon-twitter    : url('img/assets/twitter.png');
+$icon-pinterest  : url('img/assets/pinterest.png');
+$icon-youtube    : url('img/assets/youtube.png');
+
+$social-icons: (
+ facebook        : $icon-facebook,
+ twitter         : $icon-twitter,
+ pinterest       : $icon-pinterest,
+ youtube         : $icon-youtube
+);
+
+$social-colors: (
+ facebook        : $color-facebook,
+ twitter         : $color-twitter,
+ pinterest       : $color-pinterest,
+ youtube         : $color-youtube
+);
+
+.social-icon {
+   border-radius: 50%;
+   padding: .5rem;
+   text-align: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   @each $theme, $color in $social-colors {
+     &--#{$theme} {
+       background-color: $color;
+     }
+   }
+   @each $theme, $icon in $social-icons {
+     &--#{$theme} {
+       background-attachment: $icon;
+     }
+   }
+}

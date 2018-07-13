@@ -1,12 +1,12 @@
 {
-  "name": "KUNG-FU",
-  "description": "KUNG-FU",
-  "main": "gulpfile.js",
+  "name": "",
+  "description": "",
+  "main": "",
   "authors": [
-    "Anton Ustinov"
+    "Anton <anthonyustinoff@gmail.com>"
   ],
-  "license": "1.0.0",
-  "homepage": "https://github.com/ziqq/_tamplate",
+  "license": "MIT",
+  "homepage": "",
   "private": false,
   "ignore": [
     "**/.*",
@@ -14,23 +14,5 @@
     "bower_components",
     "test",
     "tests"
-  ],
-  "dependencies": {
-    "font-awesome": "fontawesome#^4.7.0",
-    "jquery-migrate": "^3.0.0",
-    "jQuery": "^3.2.1",
-    "jquery-ui": "^1.12.1",
-    "jquery.maskedinput": "jquery-maskedinput#^1.4.1",
-    "svg4everybody": "^2.1.9",
-    "fancybox": "fancyBox#^3.1.25",
-    "equalheights": "equalHeights#*",
-    "nouislider": "noUiSlider#^10.1.0",
-    "selectize": "^0.12.4",
-    "sifter": "^0.5.2",
-    "microplugin": "^0.0.3",
-    "air-datepicker": "^2.2.3",
-    "fotorama": "^4.6.4",
-    "star-rating-svg": "^1.2.1",
-    "slick-carousel": "slick-slide#^1.8.1"
-  }
+  ]
 }

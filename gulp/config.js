@@ -4,41 +4,47 @@ var production = util.env.production || util.env.prod || false;
 var destPath = 'build';
 
 var config = {
-    env       : 'development',
+    env: 'development',
     production: production,
 
     src: {
-        none         : '',
-        root         : 'src',
-        templates    : 'src/templates',
+        none: '',
+        root: 'src',
+        templates: 'src/templates',
+        assets: 'src/assets',
         templatesData: 'src/templates/data',
-        pagelist     : 'src/index.yaml',
-        sass         : 'src/sass',
+        pagelist: 'src/index.yaml',
+        sass: 'src/sass',
         // path for sass files that will be generated automatically via some of tasks
-        sassGen      : 'src/sass/generated',
-        js           : 'src/js',
-        jsAssets     : 'src/js/assets',
-        img          : 'src/img',
-        svg          : 'src/img/svg',
-        icons        : 'src/icons',
+        sassGen: 'src/sass/generated',
+
+        js: 'src/js',
+        jsAssets: 'src/js/assets',
+        jsTemp: 'src/js/temp',
+        jsLib: 'src/js/lib',
+
+        img: 'src/img',
+        sprite: 'src/img/general/sprite',
         // path to png sources for sprite:png task
-        iconsPng     : 'src/icons/png',
+        iconsPng: 'src/icons/png',
         // path to svg sources for sprite:svg task
-        iconsSvg     : 'src/icons/svg',
+        iconsSvg: 'src/icons/svg',
         // path to svg sources for iconfont task
-        iconsFont    : 'src/img/icons',
-        fonts        : 'src/fonts',
-        libs         : 'src/libs'
+        iconsFont: 'src/img/icons',
+        fonts: 'src/fonts',
+        libs: 'src/libs'
     },
     dest: {
-        root       : destPath,
-        html       : destPath,
-        css        : destPath + '/css',
-        js         : destPath + '/js',
-        jsAssets   : destPath + '/js/assets',
-        img        : destPath + '/img',
-        fonts      : destPath + '/fonts',
-        libs       : destPath + '/libs'
+        root: destPath,
+        html: destPath,
+        css: destPath + '/css',
+        js: destPath + '/js',
+        jsAssets: destPath + '/js/assets',
+        jsTemp: destPath + '/js/temp',
+        img: destPath + '/img',
+        sprite: destPath + '/img/sprite',
+        fonts: destPath + '/fonts',
+        libs: destPath + '/libs'
     },
 
     setEnv: function(env) {
