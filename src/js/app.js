@@ -40,10 +40,13 @@ $(document).ready(function() {
         });
     }
 
-    //Masked Input
-    // if ($('.js-phone-mask').length > 0) {
-    //     $('.js-phone-mask').mask('+7 (999) 999-99-99');
-    // }
+    // Masked Input
+    if ($('.js-phone-mask').length > 0) {
+        $('.js-phone-mask').inputmask({
+            mask: '+7 (999) 999-99-99',
+            clearIncomplete: true
+        });
+    }
 
     //Input Fpcus & Blur
     if ($('.js-input').length > 0) {

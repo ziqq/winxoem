@@ -268,26 +268,24 @@
             </div>
             <form class="form-order footer__form" autocomplete="off">
               <!-- Hidden Required Fields -->
-              <input type="hidden" name="project_name" value="winXoem">
-              <input type="hidden" name="admin_email" value="winx.oem@ya.ru">
-              <input class="admin-data" type="hidden" name="form_subject" value="Вопросы">
+              <input name="project_name" type="hidden" value="winXoem">
+              <input name="admin_email" type="hidden" value="winx.oem@ya.ru">
+              <input class="admin-data" name="form_subject" type="hidden" value="Вопросы">
               <!-- END Hidden Required Fields -->
               <div class="form-order__success form-success form-success--big">Ваш вопрос отправлен. В ближайшее время наши менеджеры Вам ответят.</div>
               <div class="form-order__inner">
                 <div class="input__wrap">
                   <label class="input js-input">
-                    <span class="input__title">Ваше имя</span>
-                    <input type="text" name="Имя" required> </label>
+                    <input name="Имя" type="text" placeholder="Ваше имя" required> </label>
                   <label class="input js-input">
-                    <span class="input__title">Ваш e-mail</span>
-                    <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required> </label>
+                    <input name="email" type="email" placeholder="Ваш e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required> </label>
                 </div>
               </div>
               <textarea class="form-order__textarea" name="Вопрос"></textarea>
               <div class="form-order__buttons">
-                <input type="submit" value="Задать вопрос" class="form-order__btn button button_gr">
+                <input class="form-order__btn button button_gr" type="submit" value="Задать вопрос">
                 <div class="footer__policy policy"> Нажимая кнопку "Задать вопрос" Вы атоматически даете согласие на обработку
-                  <a href="#privacy" target="_blank" data-fancybox>персональных данных</a>. </div>
+                  <a data-fancybox href="#privacy" target="_blank">персональных данных</a>. </div>
               </div>
             </form>
           </div>
@@ -296,12 +294,12 @@
           <div class="container">
             <div class="copyright">Win-X-Oem.ru &copy; 2017-2018</div>
             <div class="footer-for-users">
-              <a href="#privacy" data-fancybox>Политика конфиденциалности</a>
+              <a data-fancybox href="#privacy">Политика конфиденциалности</a>
             </div>
           </div>
         </div>
-    </div>
-    <!-- end footer -->
+        <!-- end footer -->
+      </footer>
     </div>
     <!-- begin windows -->
     <div class="windows">
@@ -312,26 +310,24 @@
           <p class="wx-window__subtitle">Оставте заявку и наш менеджер свяжется с Вами в течении 15 мин.</p>
           <form class="form-order" onsubmit="yaCounter47820397.reachGoal('sendform'); return true;" autocomplete="off">
             <!-- Hidden Required Fields -->
-            <input type="hidden" name="project_name" value="winXoem">
-            <input type="hidden" name="admin_email" value="winx.oem@ya.ru">
-            <input class="admin-data" type="hidden" name="form_subject" value="Заказ">
+            <input name="project_name" type="hidden" value="winXoem">
+            <input name="admin_email" type="hidden" value="winx.oem@ya.ru">
+            <input class="admin-data" name="form_subject" type="hidden" value="Заказ">
             <!-- END Hidden Required Fields -->
             <div class="form-order__inner">
               <div class="order__item">
                 <label class="input js-input">
-                  <span class="input__title">Ваше имя</span>
-                  <input type="text" name="Имя" required> </label>
+                  <input name="Имя" type="text" placeholder="Ваше имя" required> </label>
               </div>
               <div class="order__item">
                 <label class="input js-input">
-                  <span class="input__title">Ваш телефон</span>
-                  <input class="js-phone-mask" type="tel" name="Телефон" required> </label>
+                  <input class="js-phone-mask" name="Телефон" type="tel" placeholder="Ваш телефон" required> </label>
               </div>
             </div>
             <div class="form-order__buttons">
-              <input type="submit" value="Заказать" class="form-order__btn button button_gr">
+              <input class="form-order__btn button button_gr" type="submit" value="Заказать">
               <div class="policy"> Нажимая кнопку "Заказать" Вы атоматически даете согласие на обработку
-                <a href="#privacy" target="_blank" data-fancybox>персональных данных</a>. </div>
+                <a data-fancybox href="#privacy" target="_blank">персональных данных</a>. </div>
             </div>
             <div class="form-order__success form-success">
               <span>Спасибо за заявку!</span>
@@ -341,7 +337,7 @@
       </div>
       <!-- end order -->
       <!-- begin privacy -->
-      <div id="privacy" class="privacy">
+      <div class="privacy" id="privacy">
         <h3 class="privacy__title">Политика конфиденциальности</h3>
         <span class="privacy__subtitle">Сбор информации</span>
         <div class="privacy__part">
