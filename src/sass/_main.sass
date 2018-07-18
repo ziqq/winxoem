@@ -112,7 +112,7 @@
 		font-size: 15px
 		position: relative
 		+col()
-		+size(4)
+		+size(3)
 		+size-xs(12)
 		+r(480)
 			margin-bottom: 30px
@@ -123,15 +123,10 @@
 			display: block
 			+vx
 			top: -0
-		&_sale
-			&::before
-				+s('sale')
-		&_bonus
-			&::before
-				+s('bonus')
-		&_partner
-			&::before
-				+s('partner')
+		@each $item in sale, bonus, partner, garantee
+			&_#{$item}
+				&::before
+					+s(#{$item})
 
 //work
 .work
