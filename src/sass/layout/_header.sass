@@ -2,7 +2,7 @@
 	min-height: 100vh
 	background-position: center right
 	position: relative
-	background: url('../img/general/header-bg.png') no-repeat center right, linear-gradient(to right, $color-main--light 0%, $color-main 100%)
+	background: url('../files/assets/header-bg.png') no-repeat center right, linear-gradient(to right, $color-main--light 0%, $color-main 100%)
 	background-attachment: fixed
 	position: relative
 	+r(480)
@@ -19,10 +19,10 @@
 		position: relative
 		font-size: 18px
 	sup
-		top: -25px
+		top: -23px
 	sub
-		bottom: -1px
-		right: 16px
+		bottom: 0
+		right: 0
 
 .callback
 	float: right
@@ -61,12 +61,13 @@
 		margin-left: 0
 	//innner
 	&__inner
+
 	//title
 	&__title
 		margin-bottom: 60px
 		font-size: 55px
 		line-height: 1.3
-		font-family: $f-neo-b
+		font-weight: 600
 		+r(480)
 			font-size: 37px
 			br
@@ -75,32 +76,43 @@
 			font-size: 33px
 		+r(320)
 			font-size: 28px
+
+	&__desc
 		span
-			display: block
-			margin: 30px 0
-			font-size: 32px
-			text-transform: initial
-			+r(480)
-				font-size: 20px
+			&:not(.currency)
+				display: flex
+				align-items: baseline
+				margin: 30px 0
+				font-size: 32px
+				text-transform: initial
+				+r(480)
+					font-size: 20px
+			&.currency
+				margin-left: 10px
+				font-size: 22px
 		strong
 			text-transform: uppercase
 		small
 			font-family: $f-neo-r
 			font-size: 23px
+
 	//subtitle
 	&__subtitle
 		display: inline-block
 		margin-right: 30px
 		font-size: 32px
 		line-height: 1
+
 	//price
 	&__price
 		margin-bottom: 70px
 		+r(320)
 			margin-bottom: 50px
+
 	//benefits
 	&__button
 		display: block
+		margin-top: 80px
 		+r(480)
 			margin: auto
 

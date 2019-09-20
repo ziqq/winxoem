@@ -3,17 +3,13 @@
 	.s-title
 		color: #fff
 		&__title
-			font-family: oswald-400, sans-serif
 		&__desc
-			font-family: $f
 			color: rgba(#fff, .7)
 
 .rub
-	font-family: rouble
 	font-style: normal
 
 .num
-	font-family: $f-num
 
 .color
 	&-green
@@ -49,17 +45,14 @@
 		margin-bottom: 30px
 	&__title
 		text-transform: uppercase
-		font-family: oswald-500, sans-serif
 		letter-spacing: 1px
 	&__desc
 		margin-top: 15px
-		font-family: $f-light
 		color: rgba(#000, .7)
 
 //policy
 .policy
 	margin-top: 20px
-	font-family: $f-light
 	font-size: 12px
 	color: #777
 	a
@@ -91,12 +84,6 @@
 	&__btn
 		display: inline-block
 		vertical-align: middle
-		&::before
-			content: '\f295'
-			font-family: fontawesome
-			font-size: 15px
-			color: #fff
-			margin-right: 15px
 
 //whywe
 .whywe
@@ -108,8 +95,8 @@
 		display: inline-block
 		padding-top: 150px
 		text-transform: uppercase
-		font-family: opsans-700, sans-serif
 		font-size: 15px
+		font-weight: 500
 		position: relative
 		+col()
 		+size(3)
@@ -134,16 +121,21 @@
 	&__items
 		text-align: center
 		+row-flex()
+
 	&__item
 		display: inline-block
 		padding-top: 150px
 		text-transform: uppercase
-		font-family: opsans-700, sans-serif
 		font-size: 15px
+		font-weight: 600
 		position: relative
 		+col()
 		+size(3)
-		+size-xs(6)
+		+size-xs(12)
+
+		+r(480)
+			margin-bottom: 30px
+
 		&::before
 			content: ''
 			display: block

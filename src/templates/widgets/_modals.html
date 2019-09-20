@@ -1,0 +1,71 @@
+<!-- begin order -->
+<div class="order wx-window wx-window--small" id="order">
+    <div class="wx-window__wrap">
+        <h3 class="wx-window__title">Оставте заявку сейчас</h3>
+        <p class="wx-window__subtitle">
+            Оставте заявку и наш менеджер свяжется с Вами в течении 15 мин.
+        </p>
+        <form
+            class="form-order"
+            onsubmit="yaCounter55421374.reachGoal('sendform'); return true;"
+            autocomplete="off"
+        >
+            <!-- Hidden Required Fields -->
+            <input name="project_name" type="hidden" value="winXoem" />
+            <input name="admin_email" type="hidden" value="winx.oem@ya.ru" />
+            <input
+                class="admin-data"
+                name="form_subject"
+                type="hidden"
+                value="Заказ"
+            />
+            <!-- END Hidden Required Fields -->
+
+            <div class="form-order__inner">
+                <div class="order__item">
+                    <label class="input js-input">
+                        <input
+                            name="Имя"
+                            type="text"
+                            placeholder="Ваше имя"
+                            required
+                        />
+                    </label>
+                </div>
+                <div class="order__item">
+                    <label class="input js-input">
+                        <input
+                            class="js-phone-mask"
+                            name="Телефон"
+                            type="tel"
+                            placeholder="Ваш телефон"
+                            required
+                        />
+                    </label>
+                </div>
+            </div>
+            <div class="form-order__buttons">
+				<button
+					class="form-order__btn button button_gr"
+					type="submit"
+					onclick="yaCounter55421374.reachGoal('click_order_modal'); return true;"
+				>
+					<span class="button__inner">Заказать</span>
+				</button>
+                <div class="policy">
+                    Нажимая кнопку "Заказать" Вы атоматически даете согласие на
+                    обработку<a data-fancybox href="#privacy" target="_blank"
+                        >персональных данных</a
+                    >.
+                </div>
+            </div>
+
+            <div class="form-order__success form-success">
+                <span>Спасибо за заявку!</span>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- end order -->
+
+{% include "./_policy.html" %}

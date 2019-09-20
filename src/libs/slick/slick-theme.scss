@@ -4,7 +4,7 @@
 
 $slick-font-path: "../fonts/" !default;
 $slick-font-family: "slick" !default;
-$slick-loader-path: "../img/general/" !default;
+$slick-loader-path: "../files/assets/" !default;
 $slick-arrow-color: white !default;
 $slick-dot-color: black !default;
 $slick-dot-color-active: $slick-dot-color !default;
@@ -145,7 +145,7 @@ $slick-opacity-not-active: 0.25 !default;
             margin: 0 5px;
             width: 40px;
             height: 3px;
-            // padding: 3px;   
+            // padding: 3px;
             background: none;
             outline: none;
             line-height: 0px;

@@ -1,10 +1,17 @@
 //Variables
+$enable-grid-classes: true !default
+$max-width: 1200px
+$font-family-arial: Arial, Textbook New, sans-serif
+$font-family-roboto: Roboto, Arial, Helvetica, sans-serif !default
 
 // Font variables
-$base-font-value: 16
+$font-size-base: 16px
+$font-family-base: $font-family-roboto !default
+$line-height-base: 1.5
+$font-weight-base: 400
 
 @function rem($x)
-	@return ($x / $base-font-value)+rem
+	@return ($x / $font-size-base)+rem
 
 //FONT
 $f          : opsans-400, sans-serif
@@ -18,20 +25,18 @@ $f-ex-bold-i: opsans-800i, sans-serif
 $f-num      : oswald-400, sans-serif
 $f-neo-r    : neo-400, sans-serif
 $f-neo-b    : neo-600, sans-serif
-
 $base-font-size  : 16px
 $base-font-family: $f
 $base-line-height: 1.5
 
 //Heading
-$h1: rem($base-font-value + 24) //40
-$h2: rem($base-font-value + 18) //34
-$h3: rem($base-font-value + 12) //28
-$h4: rem($base-font-value + 6)  //22
-$h5: rem($base-font-value + 2)  //18
-
-$font-size-accent: rem($base-font-value + 2)
-$font-size-note: rem($base-font-value - 2)
+$h1: rem($font-size-base + 24) //40
+$h2: rem($font-size-base + 18) //34
+$h3: rem($font-size-base + 12) //28
+$h4: rem($font-size-base + 6)  //22
+$h5: rem($font-size-base + 2)  //18
+$font-size-accent: rem($font-size-base + 2)
+$font-size-note: rem($font-size-base - 2)
 
 //Отступы
 $base-indent   : 30px

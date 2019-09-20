@@ -9,6 +9,8 @@
 *.zip
 *.7zip
 *.vi
+*.bat
+*.sql
 *~
 
 # OS or Editor folders
@@ -30,5 +32,10 @@ nbproject
 .sass-cache
 .tmp
 _tmp
+build
+public
 node_modules
 bower_components
+src/js/temp/
+src/img/symbols.html
+package-lock.json

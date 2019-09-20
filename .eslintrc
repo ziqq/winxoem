@@ -1,40 +1,26 @@
 {
-    "parser": "babel-eslint",
+    "extends": ["prettier"],
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 6,
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+
     "env": {
-        "browser": true,
+        "es6": true,
         "node": true,
-        "jquery": true,
-        "es6": true
+        "browser": true
     },
     "rules": {
-        "no-undef": 0,
-        "no-unused-vars": 0,
-        "no-floating-decimal": 2,
-        "no-multi-spaces": [
-            2,
-            {
-                "exceptions": {
-                    "ImportDeclaration": true,
-                    "VariableDeclarator": true
-                }
-            }
-        ],
-        "no-multi-str": 2,
-        "camelcase": 1,
-        "eol-last": 1,
-        "indent": [
-            2,
-            4,
-            {
-                "SwitchCase": 1,
-                "VariableDeclarator": 1
-            }
-        ],
-        "quotes": [2, "single", "avoid-escape"],
-        "semi": [2, "always"],
-        "space-before-blocks": 2,
-        "space-before-function-paren": [2, "never"],
-        "constructor-super": 2,
-        "arrow-spacing": 2
-    }
+        "jsx-quotes": [
+            1,
+            "prefer-double"
+        ]
+    },
+    "plugins": [
+        "prettier"
+    ]
+
 }

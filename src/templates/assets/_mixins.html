@@ -1,0 +1,340 @@
+<!-- svg icon -->
+{% macro icon(i, class) %}
+<svg class="icon icon-{{i}} {{class}}" role="img"><use xlink:href="files/sprite.svg#{{i}}"></use></svg>
+{% endmacro %}
+
+{% macro img(w, h, class) %}
+<img {% if class %}class="{{class}}"{% endif %} src="http://via.placeholder.com/{{w}}x{{h}}" alt="image-placeholder">
+{% endmacro %}
+
+<!-- icon ruble -->
+{% macro currency(class) %}
+<span class="currency {{ class }}">₽</span>
+{% endmacro %}
+{# {{ mixin.currency(class='') }} #}
+
+<!-- default button -->
+{% macro btn(text, class, icon, type, slideBlockTarget, moveBlockTarget) %}
+<button
+	class="btn {{class}} {% if slideBlockTarget %}js-slide-block--open{% endif %} {% if moveBlockTarget %}js-move-block--show{% endif %}"
+	{% if type %}type="{{type}}"{% endif %} {% if slideBlockTarget %}data-slide-block-target="{{slideBlockTarget}}"{% endif %} {% if moveBlockTarget %}data-move-block-target="{{moveBlockTarget}}"{% endif %}
+>
+	{% if icon %}
+    <svg class="icon icon-{{icon}}">
+        <use xlink:href="files/sprite.svg#{{icon}}"></use>
+    </svg>
+	{% endif %}
+    {{text}}
+</button>
+{% endmacro %}
+{# {{ mixin.btn(text='', class='', icon='', type='', slideBlockTarget='', moveBlockTarget='') }} #}
+
+<!-- button icon -->
+{% macro btnIcon(class, icon, tooltip, slideBlockTarget, moveBlockTarget) %}
+<button
+	class="btn-icon btn-icon--{{icon}} {{class}} {% if slideBlockTarget %}js-slide-block--open{% endif %} {% if moveBlockTarget %}js-move-block--show{% endif %}"
+	{% if slideBlockTarget %}data-slide-block-target="{{slideBlockTarget}}"{% endif %} {% if moveBlockTarget %}data-slide-block-target="{{moveBlockTarget}}"{% endif %}
+	{% if tooltip %}title="{{tooltip}}"{% endif %}
+>
+	{% if icon %}
+    <svg class="icon icon-{{icon}}">
+        <use xlink:href="files/sprite.svg#{{icon}}"></use>
+    </svg>
+	{% endif %}
+</button>
+{% endmacro %}
+{# {{ mixin.btnIcon(class='', icon='', slideBlockTarget='', moveBlockTarget='') }} #}
+
+<!-- button with animating -->
+{% macro btnAnimate(text, class='btn-gray', messageStatus='success', messageSuccess='Все прошло просто замечательно!', messageError='Что-то пошло не так!') %}
+<button
+	class="btn btn-animate is-ready {{ class }}"
+	data-push
+	data-push-delay="2500"
+	data-push-message-error="{{ messageError }}"
+	data-push-message-success="{{ messageSuccess }}"
+	data-push-status="{{ messageStatus | escape }}"
+>
+	<span class="btn__title">{{ text }}</span>
+</button>
+{% endmacro %}
+{# {{ mixin.btnAnimate(text='', class='', messageStatus='', messageSuccess='', messageError='') }} #}
+
+<!-- link button -->
+{% macro btnLink(text, class, icon, type, slideBlockTarget, moveBlockTarget) %}
+<button
+	class="btn-link {{class}} {% if slideBlockTarget %}js-slide-block--open{% endif %} {% if moveBlockTarget %}js-move-block--show{% endif %}"
+	{% if type %}type="{{type}}"{% endif %} {% if slideBlockTarget %}data-slide-block-target="{{slideBlockTarget}}"{% endif %} {% if moveBlockTarget %}data-move-block-target="{{moveBlockTarget}}"{% endif %}
+>
+	{% if icon %}
+    <svg class="icon icon-{{icon}}">
+        <use xlink:href="files/sprite.svg#{{icon}}"></use>
+    </svg>
+	{% endif %}
+    {{text}}
+</button>
+{% endmacro %}
+{# {{ mixin.btnLink(text='', class='', icon='', type='', slideBlockTarget='', moveBlockTarget='') }} #}
+
+<!-- favorite button -->
+{% macro btnFavorite(class) %}
+<button class="btn-icon btn-icon--fav {{ class }} js-btn-fav" title="Добавить в збранное">
+	<svg class="icon icon-favorite" role="img"><use xlink:href="files/sprite.svg#favorite"></use></svg>
+	<svg class="icon icon-favorite--filled" role="img"><use xlink:href="files/sprite.svg#favorite--filled"></use></svg>
+</button>
+{% endmacro %}
+{# {{ mixin.btnFavorite(class='') }} #}
+
+<!-- reset button -->
+{% macro btnReset(title='Очитстить', class, icon='close--bold') %}
+<button
+	class="btn-reset {{class}}"
+	{% if title %}title="{{title}}"{% endif %}
+	data-toggle="modal"
+	data-target="#dell">
+	{% if icon == 'close--bold' %}
+    <span>
+        <svg class="icon icon-{{icon}}">
+            <use xlink:href="files/sprite.svg#{{icon}}"></use>
+        </svg>
+	</span>
+	{% else %}
+	<svg class="icon icon-{{icon}}">
+		<use xlink:href="files/sprite.svg#{{icon}}"></use>
+	</svg>
+	{% endif %}
+</button>
+{% endmacro %}
+{# {{ mixin.btnReset(title='', class='') }} #}
+
+<!-- empty block template -->
+{% macro emptyBlock(title, text, textClass, icon, img, iconClass, btnText, btnClass='btn btn-outline-gray mt-15', blockClass, slideBlockTarget, moveBlockTarget, visible) %}
+<div class="empty {{blockClass}}" {% if not visible %}style="display: none;"{% endif %}>
+	{% if icon %}
+	<svg class="icon icon-{{icon}} empty__icon {% if iconClass %}{{iconClass}}{% endif %} mb-10">
+		<use xlink:href="files/sprite.svg#{{icon}}"></use>
+	</svg>
+	{% endif %}
+
+	{% if img %}
+	<img src="{{img}}" alt="empty icon" class="empty__img mb-10">
+	{% endif %}
+
+	{% if title %}
+	<span class="empty__title">{{title}}</span>
+	{% endif %}
+
+	{% if text %}
+	<p class="empty__text {{textClass}}">{{text}}</p>
+	{% endif %}
+
+	{% if btnText %}
+	<a
+		href="#" class="empty__btn {{btnClass}}"
+		{% if slideBlockTarget %}data-slide-block-target="{{slideBlockTarget}}"{% endif %}
+		{% if moveBlockTarget %}data-move-block-target="{{moveBlockTarget}}"{% endif %}
+	>
+		{{btnText}}
+	</a>
+	{% endif %}
+</div>
+{% endmacro %}
+{# {{ mixin.emptyBlock(title='', text='', textClass='', icon='', img='', iconClass='', btnText='', btnClass='', blockClass='', slideBlockTarget='', moveBlockTarget='', visible='true') }} #}
+<!-- btn btn-outline-gray mt-15 -->
+
+<!-- checkbox, radio buttons -->
+{% macro checkbox(title, subTitle, title2, class, subTitleClass, checked, type='checkbox', name, img) %}
+<label class="bb-checkbox {% if checked %}is-checked{% endif %} {% if class %}{{ class }}{% endif %}">
+	<input type="{{type}}" {% if checked %}checked{% endif %} {% if name %}name="{{name}}"{% endif %}>
+	<span class="bb-checkbox__box"></span>
+	{% if title %}<span class="bb-checkbox__title">{{ title }}</span>{% endif %}
+	{% if subTitle %}<span class="bb-checkbox__subtitle {{subTitleClass}}">{{ subTitle }}</span>{% endif %}
+	{% if img %}<img src="{{img}}" alt="{{title}}" class="bb-checkbox__img">{% endif %}
+</label>
+{% endmacro %}
+{# {{ mixin.checkbox(title='', subTitle='', title2='', class='', subTitleClass='', checked='', type='', radioName='') }} #}
+
+{% macro addPhoto(title='Добавить фото', class='btn-add--small', dropdown='', dropdownPosition='right') %}
+<label
+	class="btn-add btn-add--photo {{class}} {% if dropdown %}bb-dropdown bb-dropdown--small bb-dropdown--transform bb-dropdown--hover js-bb-dropdown{% endif %}"
+	{% if dropdown %}data-dropdown-position="{{dropdownPosition}}"{% endif %}
+>
+	<div class="icon-add">
+		<svg class="icon icon-images2" role="img"><use xlink:href="files/sprite.svg#images2"></use></svg>
+		<svg class="icon icon-plus--filled" role="img"><use xlink:href="files/sprite.svg#plus--filled"></use></svg>
+	</div>
+	<span class="btn-add__text">{{title}}</span>
+	{% if dropdown %}
+		<div class="bb-dropdown__list">
+			<ul class="info-block__list no-dash">
+				<li class="info-block__item">
+					<label class="info-block__link">
+						Загрузить с устройства
+						<input type="file">
+					</label>
+				</li>
+				<li class="info-block__item">
+					<button class="info-block__link">
+						Загрузить из instagram
+					</button>
+				</li>
+			</ul>
+		</div>
+	{% else %}
+		<input type="file">
+	{% endif %}
+</label>
+{% endmacro %}
+{# {{ mixin.addPhoto(class='') }} #}
+
+<!-- checkbox slide -->
+{% macro checkboxSlide(title, title2, class, checked, type) %}
+<label class="bb-checkbox bb-checkbox--slide js-bb-checkbox {% if checked %}is-checked{% endif %}">
+	{% if title or title2 %}
+		<div class="bb-checkbox__title">
+			{% if title2 %}<span>{{ title2 }}</span>{% endif %}
+			{% if title %}<span>{{ title }}</span>{% endif %}
+		</div>
+	{% endif %}
+	<input type="checkbox" {% if checked %}checked{% endif %}>
+	<span class="bb-checkbox__box"></span>
+</label>
+{% endmacro %}
+{# {{ mixin.checkboxSlide(title='', title2='', class='', checked='', type='') }} #}
+
+<!-- input template -->
+{% macro input(title, pl, icon, type='text', class, inputClass, val, attr) %}
+<div class="bb-input {{ class}} {% if icon %}bb-input--icon{% endif %} {% if type == 'password' %} bb-input--icon{% endif %}">
+	{% if title %}<span class="bb-input__title">{{ title }}</span>{% endif %}
+	<input
+		class="bb-input__input {{ inputClass }}"
+		type="{{ type | escape }}"
+		{% if pl %} placeholder="{{ pl }}" {% endif %}
+		{% if val %} value="{{ val }}" {% endif %}
+		{% if attr %}{{ attr }}{% endif %}>
+
+	{% if icon %}
+	<svg class="icon icon-{{ icon }}">
+		<use xlink:href="files/sprite.svg#{{ icon }}"></use>
+	</svg>
+	{% endif %}
+
+	{% if type == "password" %}
+	<span class="bb-input__icon js-bb-input-password--show">
+		<svg class="icon icon-eye" role="img"><use xlink:href="files/sprite.svg#eye"></use></svg>
+	</span>
+	<span class="bb-input__icon fal js-bb-input-password--hide" style="display: none;">
+		<svg class="icon icon-eye--blocked" role="img"><use xlink:href="files/sprite.svg#eye--blocked"></use></svg>
+	</span>
+	{% endif %}
+	{% include "components/form/_Tip.html" %}
+</div>
+{% endmacro %}
+{# {{ mixin.input(title='', pl='', icon='', type='text', class='', inputClass='js-phone-mask', val='', attr='') }} #}
+
+{% macro fancyPhoto(href='files/examples/works/480x360/1.jpg', img='files/examples/works/250x250/1.jpg') %}
+<a
+	data-fancybox="images"
+	href="{{ href }}"
+>
+<img
+	data-src="{{ img }}"
+	src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+	class="lazyload"
+	alt="1">
+</a>
+{% endmacro %}
+{# {{ mixin.fancyPhoto(href='', img='') }} #}
+
+<!-- video template -->
+{% macro video(src='yQYdi2-wo88') %}
+<div class="video">
+	<a class="video__link" href="https://youtu.be/{{src}}">
+		<picture>
+			<source type="image/webp" srcset="https://i.ytimg.com/vi_webp/{{src}}/maxresdefault.webp">
+			<img class="video__media" src="https://i.ytimg.com/vi/{{src}}/maxresdefault.jpg" alt="cover">
+		</picture>
+	</a>
+	<button class="video__button" type="button" aria-label="Запустить видео">
+		<svg width="68" height="48" viewBox="0 0 68 48">
+			<path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+			<path class="video__button-icon" d="M 45,24 27,14 27,34"></path>
+		</svg>
+	</button>
+</div>
+{% endmacro %}
+{# {{ mixin.video(src='') }} #}
+
+{% macro search(class, pl) %}
+<!-- BEGIN search -->
+<div class="bb-input js-input-box js-search {{class}}">
+	<input
+		class="search__input js-input"
+		type="text"
+		placeholder="{{ pl }}"
+		autocomplete="off">
+
+	<svg class="icon icon-search bb-input__icon bb-input__icon-search">
+		<use xlink:href="files/sprite.svg#search"></use>
+	</svg>
+
+	<button
+		class="search__clear js-input--clear"
+		type="button"
+		style="display: none;">
+		<span>
+			<svg class="icon icon-close--bold bb-input__icon">
+				<use xlink:href="files/sprite.svg#close--bold"></use>
+			</svg>
+		</span>
+	</button>
+</div>
+<!-- END search -->
+{% endmacro %}
+{# {{ mixin.search(class='', pl='') }} #}
+
+{% macro headerSearch(class, pl='Название услуги или салона') %}
+<!-- BEGIN search -->
+<div class="search {{class}} js-search js-input-box">
+	<input
+		type="text"
+		class="search__input js-search-input"
+		placeholder="{{ pl }}"
+		autocomplete="off">
+
+	<svg class="icon icon-search--bold search__ico">
+		<use xlink:href="files/sprite.svg#search--bold"></use>
+	</svg>
+
+	<div class="search__hint search-hint" style="display: none;">
+		<ul class="search-hint__list">
+			<li class="search-hint__item">
+				<a href="#" class="search-hint__link">
+					<span class="search-hint__bade search-hint__bade--category">категория</span>
+					<span class="search-hint__text"><strong>Маникюр</strong></span>
+				</a>
+			</li>
+			<li class="search-hint__item">
+				<a href="#" class="search-hint__link">
+					<span class="search-hint__bade search-hint__bade--service">услуга</span>
+					<span class="search-hint__text">Классический <strong>маникюр</strong></span>
+				</a>
+			</li>
+			<li class="search-hint__item">
+				<a href="#" class="search-hint__link">
+					<span class="search-hint__bade search-hint__bade--salon">салон</span>
+					<span class="search-hint__text">Салон <strong>маникюра</strong></span>
+				</a>
+			</li>
+			<li class="search-hint__item">
+				<a href="#" class="search-hint__link">
+					<span class="search-hint__bade search-hint__bade--master">мастер</span>
+					<span class="search-hint__text">Эвелина Николаевна</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- END search -->
+{% endmacro %}
+{# {{ mixin.headerSearch(class='') }} #}

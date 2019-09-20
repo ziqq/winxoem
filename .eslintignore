@@ -1,0 +1,11 @@
+/build/**
+/public/**
+/app/**
+/dist/**
+/coverage/**
+/templates/**
+/sass/**
+src/js/dev/**
+src/js/_lib/**
+test.js
+!.eslintrc.js
