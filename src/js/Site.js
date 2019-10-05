@@ -162,18 +162,18 @@ export default class Site {
     onSubmitForm() {
         const $frorm = $('.form-order');
 
-        $frorm.on('submit', () => {
-            let _this = $(this);
+        $frorm.on('submit', function(e) {
+            e.preventDefault();
 
             $.ajax({
                 type: 'POST',
-                url: 'mail.php',
-                data: _this.serialize(),
-            }).done(function() {
+                url: '/mail.php',
+                data: $(this).serialize(),
+            }).done(() => {
                 $frorm.addClass('is-success');
 
                 setTimeout(() => {
-                    _this.trigger('reset');
+                    $(this).trigger('reset');
 
                     $('.js-input')
                         .removeClass('is-focus')
@@ -183,7 +183,6 @@ export default class Site {
                     $.fancybox.close();
                 }, 3000);
             });
-            return false;
         });
     }
 }

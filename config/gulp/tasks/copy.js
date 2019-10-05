@@ -6,7 +6,11 @@ const config = require('../../config');
 
 gulp.task('copy:rootfiles', function() {
     return gulp
-        .src([config.src.root + '/*.*', config.src.static + '/**/*'])
+        .src([
+            config.src.root + '/*.*',
+            config.src.static + '/**/*',
+            config.src.static + '/.htaccess',
+        ])
         .pipe(gulp.dest(config.dest.root));
 });
 
